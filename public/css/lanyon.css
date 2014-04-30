@@ -41,14 +41,12 @@ body {
 }
 
 html {
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
   color: #313131;
-  letter-spacing: -.025rem;
 }
 
 
@@ -148,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 14rem;
   visibility: hidden;
   overflow-y: auto;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
@@ -353,6 +351,15 @@ a.sidebar-nav-item:focus {
   color: inherit;
 }
 
+/*
+ * Social
+ */
+
+ .social {
+  float: right;
+  margin-top: 10px;
+ }
+
 
 /*
  * Pagination
@@ -365,7 +372,7 @@ a.sidebar-nav-item:focus {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
   color: #ccc;
   text-align: center;
 }
