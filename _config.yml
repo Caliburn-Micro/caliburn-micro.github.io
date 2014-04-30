@@ -1,0 +1,24 @@
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Caliburn.Micro
+tagline:          'Xaml made easy'
+description:      'A small, yet powerful framework, designed for building applications across all XAML platforms. Its strong support for MV* patterns will enable you to build your solution quickly, without the need to sacrifice code quality or testability.'
+url:              http://caliburnmicro.com
+
+author:
+  name:           'Nigel Sampson'
+  url:            https://twitter.com/nigelsampson
+
+paginate:         5
+
+# Custom vars
+version:          2.0.0-beta2
+
+github:
+  repo:           https://github.com/caliburn-micro/caliburn.micro
