@@ -357,8 +357,18 @@ a.sidebar-nav-item:focus {
 
  .social {
   float: right;
-  margin-top: 10px;
+  margin-top: 6px;
  }
+
+ /*
+  * Responsive
+  */
+
+.img-responsive, .page img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 
 /*
