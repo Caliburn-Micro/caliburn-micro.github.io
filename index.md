@@ -1,13 +1,35 @@
 ---
 layout: home
-title: Caliburn.Micro
 ---
 
 A small, yet powerful framework, designed for building applications across all XAML platforms. Its strong support for MV* patterns will enable you to build your solution quickly, without the need to sacrifice code quality or testability.
 
 ## Features
 
-### Bind properties and methods between your view and view model automatically based on customizable conventions.
+### Bind view model properties to your view based on configurable conventions
+
+``` xml
+<ListBox x:Name="Products" />
+``` 
+
+``` csharp
+public BindableCollection<ProductViewModel> Products
+{
+    get; private set; 
+}
+
+public ProductViewModel SelectedProduct
+{
+    get { return _selectedProduct; }
+    set
+    {
+        _selectedProduct = value;
+        NotifyOfPropertyChange(() => SelectedProduct);
+    }
+}
+```
+
+### Apply methods between your view and view model automatically with parameters and guard methods
 
 ``` xml
 <StackPanel>
