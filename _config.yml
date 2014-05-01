@@ -3,7 +3,7 @@ markdown:         redcarpet
 pygments:         true
 
 # Permalinks
-permalink:        pretty
+permalink:        '/announcements/:title'
 
 # Setup
 title:            Caliburn.Micro

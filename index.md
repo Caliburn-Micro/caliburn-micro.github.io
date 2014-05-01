@@ -6,14 +6,30 @@ title: Caliburn.Micro
 A small, yet powerful framework, designed for building applications across all XAML platforms. Its strong support for MV* patterns will enable you to build your solution quickly, without the need to sacrifice code quality or testability.
 
 ## Features
- - Clean MV* Architecture
- - Dependency Injection
- - Simple App Lifecyle
- - Eventing, Modals, etc.
- - Screen State Management
- - Consistent Async programming with Tasks and Coroutines
- - Convention over Configuration
- - Fully testable
+
+### Bind properties and methods between your view and view model automatically based on customizable conventions.
+
+``` xml
+<StackPanel>
+    <TextBox x:Name="Username" />
+    <PasswordBox x:Name="Password" />
+    <Button x:Name="Login" Content="Log in" />
+</StackPanel>
+```
+
+``` csharp
+public bool CanLogin(string username, string password)
+{
+    return !String.IsNullOrEmpty(username) && !String.IsNullOrEmpty(password);
+}
+
+public string Login(string username, string password)
+{
+    ...
+}
+```
+
+### and many more ...
 
 ## Getting Started
 The quickest way to get started is down grab the latest package from [Nuget][nuget] and browse the [documentation][docs]. If you're running into trouble checkout our [support][support] section.
@@ -31,13 +47,16 @@ As is with any open source project there are many other contributors, you can se
 ## Sponsors
 These companies have kindly donated time so that some of the above developers can work on extending and supporting Caliburn.Micro.
 
-### [Blue Spire][bs]
-![Blue Spire](/public/images/blue-spire.png)
-
-Blue Spire is a Tallahassee, FL. based software development firm specializing in user interface architecture and engineering. Rob Eisenberg, aka EisenbergEffect, is currently the lead architect of the Durandal project.
-
 ### [Marker Metro][mm]
-![Blue Spire](/public/images/marker-metro.png)
+[![Marker Metro](/public/images/marker-metro.png)][mm]
+
+[Marker Metro][mm] is a world-class, award winning 100% Windows apps agency based in Auckland, New Zealand.
+
+### [Blue Spire][bs]
+[![Blue Spire](/public/images/blue-spire.png)][bs]
+
+[Blue Spire][bs] is a Tallahassee, FL. based software development firm specializing in user interface architecture and engineering. [Rob Eisenberg][rob] is currently the lead architect of the [Durandal][durandal] project.
+
 
 [nuget]: http://www.nuget.org/packages/Caliburn.Micro
 [docs]: /documentation
@@ -49,3 +68,4 @@ Blue Spire is a Tallahassee, FL. based software development firm specializing in
 [mm]: http://markermetro.com
 [thomas]: https://twitter.com/thomasibel
 [contributors]: https://github.com/Caliburn-Micro/Caliburn.Micro/graphs/contributors
+[durandal]: http://durandaljs.com/
