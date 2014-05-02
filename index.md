@@ -6,7 +6,7 @@ A small, yet powerful framework, designed for building applications across all X
 
 ## Features
 
-### Bind view model properties to your view based on configurable conventions
+#### Bind view model properties to your view based on convention
 
 ``` xml
 <ListBox x:Name="Products" />
@@ -29,7 +29,9 @@ public ProductViewModel SelectedProduct
 }
 ```
 
-### Apply methods between your view and view model automatically with parameters and guard methods
+even at design time!
+
+#### Apply methods between your view and view model automatically with parameters and guard methods
 
 ``` xml
 <StackPanel>
@@ -50,6 +52,11 @@ public string Login(string username, string password)
     ...
 }
 ```
+
+### Decouple view models with built in composition patterns and event aggregation 
+
+#### Works everywhere Xaml does
+Supports WPF, Silverlight, Windows Phone, Windows 8 including Universal apps.
 
 ### and many more ...
 
