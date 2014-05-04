@@ -4,7 +4,7 @@ title: Documentation
 ---
 
  - Getting Started
- 	- [Introduction](/introduction)
+ 	- [Introduction](./introduction)
  	- Obtain and Build the Code
  	- Nuget
  	- Cheat Sheet
