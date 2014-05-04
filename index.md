@@ -1,5 +1,6 @@
 ---
 layout: home
+published: true
 ---
 
 A small, yet powerful framework, designed for building applications across all XAML platforms. Its strong support for MV* patterns will enable you to build your solution quickly, without the need to sacrifice code quality or testability.
@@ -53,7 +54,20 @@ public string Login(string username, string password)
 }
 ```
 
-### Decouple view models with built in composition patterns and event aggregation 
+#### Decouple view models with built in composition patterns and event aggregation 
+``` csharp
+public class DocumentTabsViewModel : Conductor<TabViewModel>.Collection.OneActive
+{
+	...
+}
+```
+
+``` csharp
+public class CartSummaryViewModel : IHandle<CartChangedMessage>
+{
+	...
+}
+```
 
 #### Works everywhere Xaml does
 Supports WPF, Silverlight, Windows Phone, Windows 8 including Universal apps.
