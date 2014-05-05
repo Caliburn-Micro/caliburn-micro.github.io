@@ -1,6 +1,6 @@
 # Dependencies
 markdown: redcarpet
-pygments: false
+pygments: true
 
 # Permalinks
 permalink: '/announcements/:title'
@@ -16,9 +16,10 @@ author:
   url: https://twitter.com/nigelsampson
 
 paginate: 5
+paginate_path: '/announcements/:num'
 
 # Custom vars
 version: 2.0.0-beta2
 
 github:
-  repo: https://github.com/caliburn-micro/caliburn.micro
+  repo:  pahttps://github.com/caliburn-micro/caliburn.micro
