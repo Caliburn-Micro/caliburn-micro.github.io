@@ -1,24 +1,24 @@
 # Dependencies
-markdown:         redcarpet
-pygments:         true
+markdown: redcarpet
+pygments: false
 
 # Permalinks
-permalink:        '/announcements/:title'
+permalink: '/announcements/:title'
 
 # Setup
-title:            Caliburn.Micro
-tagline:          'Xaml made easy'
-description:      'An opinionated MVVM framework for all Xaml platforms.'
-url:              http://caliburnmicro.com
+title: Caliburn.Micro
+tagline: 'Xaml made easy'
+description: 'An opinionated MVVM framework for all Xaml platforms.'
+url: http://caliburnmicro.com
 
 author:
-  name:           'Nigel Sampson'
-  url:            https://twitter.com/nigelsampson
+  name: 'Nigel Sampson'
+  url: https://twitter.com/nigelsampson
 
-paginate:         5
+paginate: 5
 
 # Custom vars
-version:          2.0.0-beta2
+version: 2.0.0-beta2
 
 github:
-  repo:           https://github.com/caliburn-micro/caliburn.micro
+  repo: https://github.com/caliburn-micro/caliburn.micro
