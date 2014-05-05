@@ -46,6 +46,7 @@ Different parameters can be passed to the method like this:
 	<dd>The view (usually a UserControl or Window) that is bound to the ViewModel.</dd>
 	<dt>$executionContext</dt>
 	<dd>The action's execution context, which contains all the above information and more. This is useful in advanced scenarios.</dd>
+	<dt>$this</dt>
 	<dd>The actual UI element to which the action is attached. In this case, the element itself won't be passed as a parameter, but rather its default property.</dd>
 </dl>
 

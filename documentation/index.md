@@ -9,9 +9,9 @@ title: Documentation
  	- [Nuget](./nuget)
  	- [Cheat Sheet](./cheat-sheet)
  - Soup to Nuts
- 	- Basic Configuration
- 	- Customizing the Bootstrapper
- 	- All about Actions
+ 	- [Basic Configuration](./configuration)
+ 	- [Customizing the Bootstrapper](./bootstrapper)
+ 	- [All about Actions](./actions)
  	- Working with Windows Phone
  	- Working with Windows RT
  	- IResult and Coroutines
