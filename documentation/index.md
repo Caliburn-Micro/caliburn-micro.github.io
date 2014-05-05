@@ -5,9 +5,9 @@ title: Documentation
 
  - Getting Started
  	- [Introduction](./introduction)
- 	- Obtain and Build the Code
- 	- Nuget
- 	- Cheat Sheet
+ 	- [Obtain and Build the Code](./build)
+ 	- [Nuget](./nuget)
+ 	- [Cheat Sheet](./cheat-sheet)
  - Soup to Nuts
  	- Basic Configuration
  	- Customizing the Bootstrapper
