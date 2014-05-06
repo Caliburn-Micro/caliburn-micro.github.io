@@ -22,4 +22,4 @@ paginate_path: '/announcements/:num'
 version: 2.0.0-beta2
 
 github:
-  repo:  pahttps://github.com/caliburn-micro/caliburn.micro
+  repo: https://github.com/caliburn-micro/caliburn.micro
