@@ -103,7 +103,7 @@ If you are working with WP7 or using the Silverlight Navigation Framework, you m
 
 Previously, we discussed the theory and basic APIs for Screens and Conductors in Caliburn.Micro. Now I would like to walk through the first of several samples. This particular sample demonstrates how to set up a simple navigation-style shell using Conductor<T> and two “Page” view models. As you can see from the project structure, we have the typical pattern of Bootstrapper and ShellViewModel. In order to keep this sample as simple as possible, I’m not even using an IoC container with the Bootstrapper. Let’s look at the ShellViewModel first. It inherits from Conductor<object> and is implemented as follows:
 
-~~~ csharp
+``` csharp
 public class ShellViewModel : Conductor<object> {
     public ShellViewModel() {
         ShowPageOne();
@@ -117,7 +117,7 @@ public class ShellViewModel : Conductor<object> {
         ActivateItem(new PageTwoViewModel());
     }
 }
-~~~
+```
 
 Here is the corresponding ShellView:
 
