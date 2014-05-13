@@ -6,6 +6,7 @@ title: Screens, Conductors and Composition
 Actions, Coroutines and Conventions tend to draw the most attention to Caliburn.Micro, but the Screens and Conductors piece is probably most important to understand if you want your UI to be engineered well. It’s particularly important if you want to leverage composition. The terms Screen, Screen Conductor and Screen Collection have more recently been codified by Jeremy Miller during his work on the book "Presentation Patterns" for Addison Wesley. While these patterns are primarily used in CM by inheriting ViewModels from particular base classes, its important to think of them as roles rather than as View-Models. In fact, depending on your architecture, a Screen could a be a UserControl, Presenter or ViewModel. That’s getting a little ahead of ourselves though. First, let’s talk about what these things are in general.
 
 ### Theory
+
 ##### Screen
 This is the simplest construct to understand. You might think of it as a stateful unit of work existing within the presentation tier of an application. It’s independent from the application shell. The shell may display many different screens, some even at the same time. The shell may display lots of widgets as well, but these are not part of any screen. Some screen examples might be a modal dialog for application settings, a code editor window in Visual Studio or a page in a browser. You probably have a pretty good intuitive sense about this.
 
@@ -102,7 +103,7 @@ If you are working with WP7 or using the Silverlight Navigation Framework, you m
 
 Previously, we discussed the theory and basic APIs for Screens and Conductors in Caliburn.Micro. Now I would like to walk through the first of several samples. This particular sample demonstrates how to set up a simple navigation-style shell using Conductor<T> and two “Page” view models. As you can see from the project structure, we have the typical pattern of Bootstrapper and ShellViewModel. In order to keep this sample as simple as possible, I’m not even using an IoC container with the Bootstrapper. Let’s look at the ShellViewModel first. It inherits from Conductor<object> and is implemented as follows:
 
-``` csharp
+~~~ csharp
 public class ShellViewModel : Conductor<object> {
     public ShellViewModel() {
         ShowPageOne();
@@ -116,7 +117,7 @@ public class ShellViewModel : Conductor<object> {
         ActivateItem(new PageTwoViewModel());
     }
 }
-```
+~~~
 
 Here is the corresponding ShellView:
 
