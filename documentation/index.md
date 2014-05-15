@@ -18,10 +18,11 @@ title: Documentation
  	- [Screens, Conductors and Composition](./composition)
  	- [All About Conventions](./conventions)
 	 	- [View / ViewModel Naming Conventions](./naming-conventions)
-	 	- Handling Custom Conventions
+	 	- [Handling Custom Conventions](./custom-conventions)
 	 	- Using the NameTransformer
 	- The Event Aggregator
-	- Simple IoC Container
-	- Service Locator
-	- Design Time Support
-	- Async (Task Support) 
+	- [Simple IoC Container](./simple-container)
+	- [Service Locator](./service-locator)
+	- [The Window Manager](./window-manager)
+	- [Design Time Support](./design-time)
+	- [Async (Task Support)](./async) 
