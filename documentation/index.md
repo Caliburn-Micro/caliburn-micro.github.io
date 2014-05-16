@@ -20,7 +20,7 @@ title: Documentation
 	 	- [View / ViewModel Naming Conventions](./naming-conventions)
 	 	- [Handling Custom Conventions](./custom-conventions)
 	 	- Using the NameTransformer
-	- The Event Aggregator
+	- [The Event Aggregator](./event-aggregator)
 	- [Simple IoC Container](./simple-container)
 	- [Service Locator](./service-locator)
 	- [The Window Manager](./window-manager)
