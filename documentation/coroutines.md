@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Documentation
+title: IResult and Coroutines
 ---
 
 Previously, I mentioned that there was one more compelling feature of the Actions concept called Coroutines. If you haven’t heard that term before, here’s what wikipedia has to say:
