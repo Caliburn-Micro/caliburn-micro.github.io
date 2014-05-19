@@ -14,6 +14,7 @@ PM> Install-Package Caliburn.Micro.Start
 ```
 
 ### After installation
+
 #### Clean out your App.xaml.cs file. It should look like this:
 
 ``` csharp
@@ -30,6 +31,7 @@ namespace YourNamespace
     }
 }
 ```
+
 #### Add the AppBoostrapper to your App.xaml's Resources section.
 
 ##### Silverlight

@@ -13,12 +13,16 @@ Instead of registering an callback when a coroutine is completed you now can awa
 
 ``` csharp
 public static class Coroutine {
-    public static void BeginExecute(IEnumerator<IResult> coroutine, 
-                                    CoroutineExecutionContext context = null, 
-                                    EventHandler<ResultCompletionEventArgs> callback = null) { }
 
-    public static Task ExecuteAsync(IEnumerator<IResult> coroutine,
-                                    CoroutineExecutionContext context = null)  { }
+    public static void BeginExecute(
+		IEnumerator<IResult> coroutine, 
+		CoroutineExecutionContext context = null, 
+		EventHandler<ResultCompletionEventArgs> callback = null) { }
+
+    public static Task ExecuteAsync(
+		IEnumerator<IResult> coroutine,
+		CoroutineExecutionContext context = null)  { }
+
 }
 ```
 
@@ -27,14 +31,17 @@ A Task object can be wrapped in an IResult and used inside a coroutine as if it 
 ``` csharp
 public static class TaskExtensions {
 
-    public static Task ExecuteAsync(this IResult result, CoroutineExecutionContext context = null) { }
+    public static Task ExecuteAsync(
+		this IResult result, CoroutineExecutionContext context = null) { }
 
-    public static Task<TResult> ExecuteAsync<TResult>(this IResult<TResult> result,
-                                                      CoroutineExecutionContext context = null) { }
+    public static Task<TResult> ExecuteAsync<TResult>(
+		this IResult<TResult> result,
+		CoroutineExecutionContext context = null) { }
 
     public static TaskResult AsResult(this Task task) { }
 
     public static TaskResult<TResult> AsResult<TResult>(this Task<TResult> task) { }
+
 }
 ```
 
