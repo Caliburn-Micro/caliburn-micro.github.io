@@ -19,7 +19,7 @@ title: Documentation
     - [All About Conventions](./conventions)
         - [View / ViewModel Naming Conventions](./naming-conventions)
         - [Handling Custom Conventions](./custom-conventions)
-        - Using the NameTransformer 
+        - [Using the NameTransformer](./name-transformer) 
     - [The Event Aggregator](./event-aggregator)
     - [Simple IoC Container](./simple-container)
     - [Service Locator](./service-locator)
