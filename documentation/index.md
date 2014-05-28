@@ -8,6 +8,7 @@ title: Documentation
     - [Obtain and Build the Code](./build)
     - [Nuget](./nuget)
     - [Cheat Sheet](./cheat-sheet)
+ - [Migrating to 2.0.0](./migrating-to-2.0.0)
  - Soup to Nuts
     - [Basic Configuration](./configuration)
     - [Customizing the Bootstrapper](./bootstrapper)
