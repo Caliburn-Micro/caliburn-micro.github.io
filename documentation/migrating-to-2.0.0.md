@@ -15,9 +15,10 @@ This document will try to outline all the changes you may see updating a project
 
 ### All Platforms
 
- - `EventAggregator.Publish` now takes an action to marshal the event. Use `EventAggregator.PublishOnCurrentThread` for the existing behaviour.
- -  - Xaml namespace references to Caliburn.Micro for functionality such as `Message.Attach` should be renamed from `clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro` to `clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro.Platform`. On WPF if you're using the `xmlns:cm="http://www.caliburnproject.org"` syntax then there's no change. On WinRT platforms (Windows 8, Windows 8.1 and Windows Phone 8.1) the ` xmlns:cm="using:Caliburn.Micro"` syntax will continue to work.
- -  `IResult` uses `CoroutineExecutionContext` instead of `ActionExecutionContext`.
+ - `EventAggregator.Publish` now takes an action to marshal the event. Use `EventAggregator.PublishOnUIThread` for the existing behaviour.
+ - XAML namespace references to Caliburn.Micro for functionality such as `Message.Attach` should be renamed from `clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro` to `clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro.Platform`. On WPF if you're using the `xmlns:cm="http://www.caliburnproject.org"` syntax then there's no change. On WinRT platforms (Windows 8, Windows 8.1 and Windows Phone 8.1) the ` xmlns:cm="using:Caliburn.Micro"` syntax will continue to work.
+ - `IResult` uses `CoroutineExecutionContext` instead of `ActionExecutionContext`.
+ - `BootstrapperBase.Start` is now called `BootstrapperBase.Initialize`
 
 #### Windows Phone
 
