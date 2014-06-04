@@ -51,7 +51,7 @@ Note that we are utilizing the Bootstrapper, and specifically the Configure meth
 
 ### Publishing Events
 
-Once you have obtained a reference to the EventAggregator instance you are free to begin publishing Events. An Event or message as we call it to distinguish between .Net events, can be any object you like. There is no requirement to build your Events in any specific fashion. As you can see in the sample below the Publish method can accept any entity that derives from System.Object and will happily publish it to any interested subscribers.
+Once you have obtained a reference to the EventAggregator instance you are free to begin publishing Events. An Event or message as we call it to distinguish between .Net events, can be any object you like. There is no requirement to build your Events in any specific fashion. As you can see in the sample below the Publish methods can accept any entity that derives from System.Object and will happily publish it to any interested subscribers.
 
 ``` csharp
 public class FooViewModel {
@@ -60,9 +60,9 @@ public class FooViewModel {
         public FooViewModel(IEventAggregator eventAggregator) {
             _eventAggregator = eventAggregator;
 
-            _eventAggregator.Publish(new object());
-            _eventAggregator.Publish("Hello World");
-            _eventAggregator.Publish(22);
+            _eventAggregator.PublishOnUIThread(new object());
+            _eventAggregator.PublishOnUIThread("Hello World");
+            _eventAggregator.PublishOnUIThread(22);
         }
     }
 ```
@@ -138,7 +138,7 @@ public class FooViewModel : IHandle<object>, IHandle<string> {
         public FooViewModel(IEventAggregator eventAggregator) {
             _eventAggregator = eventAggregator;
             _eventAggregator.Subscribe(this);
-            _eventAggregator.Publish("Hello");
+            _eventAggregator.PublishOnUIThread("Hello");
         }
     
         public void Handle(object message) {
@@ -168,7 +168,7 @@ public class FooViewModel : IHandle<object> {
 
         public void Handle(object message){
             if (_eventAggregator.HandlerExistsFor(typeof(SpecialMessageEvent))){
-                _eventAggregator.Publish(new SpecialEventMessage(message));
+                _eventAggregator.PublishOnUIThread(new SpecialEventMessage(message));
             }
         }
     }
