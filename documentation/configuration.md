@@ -54,7 +54,7 @@ Now that we have our VM, let’s create the bootstrapper that will configure the
 namespace Caliburn.Micro.Hello {
     public class HelloBootstrapper : BootstrapperBase {
         public HelloBootstrapper() {
-            Start();
+            Initialize();
         }
 
         protected override void OnStartup(object sender, StartupEventArgs e) {
