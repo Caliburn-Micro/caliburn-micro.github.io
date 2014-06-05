@@ -24,16 +24,11 @@ public class MefBootstrapper : BootstrapperBase
 
     protected override void Configure()
     {
-        var catalog = new AggregateCatalog(
-            AssemblySource.Instance
-                          .Select(x => new AssemblyCatalog(x))
-                          .OfType<ComposablePartCatalog>() );
-
-        #if SILVERLIGHT
-        container = CompositionHost.Initialize(catalog);
-        #else
-        container = new CompositionContainer(catalog);
-        #endif
+        container = CompositionHost.Initialize(
+            new AggregateCatalog(
+                AssemblySource.Instance.Select(x => new AssemblyCatalog(x)).OfType<ComposablePartCatalog>()
+                )
+            );
 
         var batch = new CompositionBatch();
 
