@@ -91,7 +91,7 @@ There are two very important details about CMs IConductor implementations that I
 
 ##### Quasi-Conductors
 
-Not everything in CM that can be a screen is rooted inside of a Conductor. For example, what about the your root view model? If it’s a conductor, who is activating it? Well, that’s one of the jobs that the Bootstrapper performs. The Bootstrapper itself is not a conductor, but it understands the fine-grained lifecycle interfaces discussed above and ensures that your root view model is treated with the respect it deserves. The WindowManager works in a similar way5 by acting a little like a conductor for the purpose of enforcing the lifecycle of your modal (and modeless - WPF only) windows. So, lifecycle isn’t magical. All your screens/conductors must be either rooted in a conductor or managed by the Bootstrapper or WindowManager to work properly; otherwise you are going to need to manage the lifecycle yourself.
+Not everything in CM that can be a screen is rooted inside of a Conductor. For example, what about the your root view model? If it’s a conductor, who is activating it? Well, that’s one of the jobs that the Bootstrapper performs. The Bootstrapper itself is not a conductor, but it understands the fine-grained lifecycle interfaces discussed above and ensures that your root view model is treated with the respect it deserves. The WindowManager works in a similar way by acting a little like a conductor for the purpose of enforcing the lifecycle of your modal (and modeless - WPF only) windows. So, lifecycle isn’t magical. All your screens/conductors must be either rooted in a conductor or managed by the Bootstrapper or WindowManager to work properly; otherwise you are going to need to manage the lifecycle yourself.
 
 ##### View-First
 
