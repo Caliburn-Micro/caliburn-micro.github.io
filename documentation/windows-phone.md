@@ -14,7 +14,7 @@ public class HelloWP7Bootstrapper : PhoneBootstrapperBase {
     PhoneContainer container;  
   
     public HelloWP7Bootstrapper() {
-        Start();
+        Initialize();
     }
 
     protected override void Configure() {  
