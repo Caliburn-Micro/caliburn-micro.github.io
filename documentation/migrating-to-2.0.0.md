@@ -19,6 +19,11 @@ This document will try to outline all the changes you may see updating a project
  - XAML namespace references to Caliburn.Micro for functionality such as `Message.Attach` should be renamed from `clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro` to `clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro.Platform`. On WPF if you're using the `xmlns:cm="http://www.caliburnproject.org"` syntax then there's no change. On WinRT platforms (Windows 8, Windows 8.1 and Windows Phone 8.1) the ` xmlns:cm="using:Caliburn.Micro"` syntax will continue to work.
  - `IResult` uses `CoroutineExecutionContext` instead of `ActionExecutionContext`.
  - `BootstrapperBase.Start` is now called `BootstrapperBase.Initialize`
+ - `BootstrapperBase.Initialize` and `CaliburnApplication.Initialize` is now not automatically called before the `Display*` methods. If you need it to be then call `Initialise` from the constructor. 
+
+### WPF
+
+ - `Bootstrapper<T>` has been removed. Use `Bootstrapper` and override `OnLaunched` instead.
 
 #### Windows Phone
 
