@@ -72,6 +72,9 @@ namespace Caliburn.Micro.WinRT.Sample
 
         protected override void OnLaunched(LaunchActivatedEventArgs args)
         {
+ 			if (args.PreviousExecutionState == ApplicationExecutionState.Running)
+                return;
+
             DisplayRootView<MenuView>();
         }
     }
@@ -124,3 +127,10 @@ Due to the event model of a WinRT application there isn’t a suitable place to 
 Any significantly sized WinRT application will most likely use a combination of the two approaches. While you may use View first to quickly enable the navigation metaphor with a back button you may compose individual views with child view models. Also some launch scenarios such as Share Target give you a small window to work in where View Model first will be simpler. The sample WinRT application shows this approach.
 
 Overall these changes should give you increased functionality and better control of your application using Caliburn Micro.
+
+
+### Dealing with Fast App Resume
+
+On Windows 8 OnLaunched will only be called when your app is launched, if your app is already running and the user relaunches then the app will be activated but not launched and opened where it currently is.
+
+On Windows Phone 8.1 then OnLaunched will be called with a `PreviousExecutionState` of `ApplicationExecutionState.Running`. You need to check for this to not overwrite the current state of the app.
