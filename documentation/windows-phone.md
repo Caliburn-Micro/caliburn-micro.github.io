@@ -3,6 +3,8 @@ layout: page
 title: Working with Windows Phone
 ---
 
+**Important** - Windows Phone 8.1 is built on the Windows Runtime (WinRT) rather than Silverlight, the documentation at [Working with Windows RT (Windows 8 and Windows Phone 8.1)](./windows-runtime) applies best. If you are still using a Windows Phone 8.1 Silverlight project then follow along here.
+
 In version 1.0 we had pretty good support for building apps for WP7, but in v1.1 we’ve taken things up a notch. Let’s look at the same HelloWP7 sample that we did previously, but see how it’s been updated to take advantage of our improved tombstoning, launcher/chooser support and strongly typed navigation. You’ll also notice that the code is cleaner overall.
 
 ### Bootstrapper
