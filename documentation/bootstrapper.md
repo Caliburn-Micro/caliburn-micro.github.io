@@ -19,7 +19,7 @@ public class MefBootstrapper : BootstrapperBase
 
     public MefBootstrapper()
     {
-        Initialise();
+        Initialize();
     }
 
     protected override void Configure()
