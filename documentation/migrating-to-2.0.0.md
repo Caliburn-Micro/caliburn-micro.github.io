@@ -20,6 +20,7 @@ This document will try to outline all the changes you may see updating a project
  - `IResult` uses `CoroutineExecutionContext` instead of `ActionExecutionContext`.
  - `BootstrapperBase.Start` is now called `BootstrapperBase.Initialize`
  - `BootstrapperBase.Initialize` and `CaliburnApplication.Initialize` is now not automatically called before the `Display*` methods. If you need it to be then call `Initialise` from the constructor. 
+ - `BindableCollection<T>` move operations aren't automatically dispatched to the UI thread.
 
 ### WPF
 
