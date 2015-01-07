@@ -92,6 +92,6 @@ namespace YourNamespace
 ```
 
 ##### WinRT
-For WinRT, the process of getting started is unfortunately quite different from the other platforms, due to significant design differences in the Windows Xaml APIs. For detailed instructions please see [Working with WinRT](./winrt).
+For WinRT, the process of getting started is unfortunately quite different from the other platforms, due to significant design differences in the Windows Xaml APIs. For detailed instructions please see [Working with WinRT](./windows-runtime).
 
 [nuget]: http://www.nuget.org/
