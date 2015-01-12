@@ -46,7 +46,7 @@ In .NET development, all assemblies must have a single default namespace. So the
 | &nbsp; | View Model | View |
 |-|------------|------|
 | Convention | &lt;RootNS&gt;.&lt;ViewModelTypeName&gt; | &lt;RootNS&gt;.&lt;ViewTypeName&gt; |
-| Example 1 | MyProject.ShallViewModel | MyProject.ShellView |
+| Example 1 | MyProject.ShellViewModel | MyProject.ShellView |
 | Example 2 | MyProject.MainPageViewModel | MyProject.MainPage |
 
 While all the Views and ViewModels of many applications may reside in a single assembly, it's common practice to organize Views and ViewModels in separate folders within a project. As a consequence, Visual Studio will, by default, place the components into separate namespaces corresponding to those folders. Since project folders are similar to operating system folders, project subfolders may be nested several layers deep as well. The namespace naming convention for this common use case can be described as follows:
