@@ -80,7 +80,7 @@ protected override IEnumerable<Assembly> SelectAssemblies()
 }
 ```
 
-All you have to do is return a list of searchable assemblies. By default, the base class returns the assembly that your Application exists in. So, if all your views are in the same assembly as your application, you don’t even need to worry about this. If you have multiple referenced assemblies that contain views, this is an extension point you need to remember. Also, if you are dynamically loading modules, you’ll need to make sure they get registered with your IoC container and the AssemblySoure.Instance when they are loaded. 
+All you have to do is return a list of searchable assemblies. By default, the base class returns the assembly that your Application exists in. So, if all your views are in the same assembly as your application, you don’t even need to worry about this. If you have multiple referenced assemblies that contain views, this is an extension point you need to remember. Also, if you are dynamically loading modules, you’ll need to make sure they get registered with your IoC container and the AssemblySource.Instance when they are loaded. 
 
 After creating the container and providing it with the catalogs, I make sure to add a few Caliburn.Micro-specific services. The framework provides default implementations of both IWindowManager and IEventAggregator. Those are pieces that I’m likely to take dependencies on elsewhere, so I want them to be available for injection. I also register the container with itself (just a personal preference).
 
