@@ -23,9 +23,9 @@ This document will try to outline all the changes you may see updating a project
  - `BindableCollection<T>` move operations aren't automatically dispatched to the UI thread.
  - `Bind.Model="some-key-string"` is obsolete and should not be used.
 
-### WPF
+### WPF/SL5
 
- - `Bootstrapper<T>` has been removed. Use `BootstrapperBase` and override `OnLaunched` instead.
+ - `Bootstrapper<T>` has been removed. Use `BootstrapperBase` and override `OnStartup` with a call to `DisplayRootViewFor<T>()` instead.
 
 #### Windows Phone
 
