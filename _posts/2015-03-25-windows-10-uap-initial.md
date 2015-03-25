@@ -9,9 +9,21 @@ Yesterday Microsoft released the [Windows 10 Technical Preview tools](http://dev
 
 Out of the box Windows 10 can use Windows 8.1 assemblies with no changes so using the Windows 8.1 version of Caliburn.Micro will work. Just carry on as you normally do and add a [nuget reference](https://www.nuget.org/packages/Caliburn.Micro/), Visual Studio 2015 will use the Win 8.1 assemblies in the package (and checkout out the new nuget UI at the same time).
 
-The nuget package does add a reference to the Behaviours SDK as part of the install. It appears this SDK has been rolled into the platform so this reference will fail, you can remove it. However Caliburn.Micro still needs those assemblies, by default they reside at the path below so you can add manual reference and things will run fine.
+The nuget package does add a reference to the Behaviours SDK as part of the install. It ~~appears this SDK has been rolled into the platform so this reference will fail, you can remove it. However Caliburn.Micro still needs those assemblies, by default they reside at the path below so you can add manual reference and things will run fine.~~
 
-`C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral`
+**Update:** I was wrong about the Behaviours SDK, after reading the release notes the problem is that the platform can't reference Windows 8.1 extensions. You should follow the release notes work around. Which is to copy the extension from `C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1\ExtensionSDKs` to `C:\Program Files (x86)\Microsoft SDKs\UAP\v0.8.0.0\ExtensionSDKs` and a reference in your project by adding the following to your csproj.
+
+``` xml
+<ItemGroup>
+  <!-- A reference to the entire .NET Framework and 
+         Windows SDK is automatically included -->
+     <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0">
+    <Name>Behaviors SDK %28XAML%29</Name>
+  </SDKReference>
+</ItemGroup>
+```
+
+
 
 
 ### Platforms
