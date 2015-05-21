@@ -22,6 +22,7 @@ This document will try to outline all the changes you may see updating a project
  - `BootstrapperBase.Initialize` and `CaliburnApplication.Initialize` is now NOT automatically called before the `Display*` methods. If you need it to be then call `Initialise` from the constructor. 
  - `BindableCollection<T>` move operations aren't automatically dispatched to the UI thread.
  - `Bind.Model="some-key-string"` is obsolete and should not be used.
+ - `ViewAware.CacheViews` has been removed, use `Views` instead. `ViewAware` now uses weak values to hold a reference to the view.
 
 ### WPF/SL5
 
