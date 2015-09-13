@@ -3,7 +3,7 @@ layout: page
 title: Obtain and build the code
 ---
 
-Caliburn.Micro uses Git for source control. I highly recommend that you use the [GitHub for Windows client][gfw].
+Caliburn.Micro uses Git for source control. I highly recommend that you use the [GitHub Desktop client][gd].
 
 ### Build the code 
 1. Navigate to the folder where you cloned the repository.
@@ -12,4 +12,4 @@ Caliburn.Micro uses Git for source control. I highly recommend that you use the 
 4. Press Ctrl+Shift+B (or use the Build menu) to build the solution.
 5. The assemblies will be generated in the `bin` directory under the root of the repository.
 
-[gfw]: https://windows.github.com/
+[gd]: https://desktop.github.com/
