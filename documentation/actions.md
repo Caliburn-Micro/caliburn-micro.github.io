@@ -164,6 +164,32 @@ You must start the variable with a “$” but the name is treated in a case-ins
 ##### Note: Using Special Values like $this or a Named Element
 When you don't specify a property, CM uses a default one, which is specified by the particular control convention. For button, that property happens to be "DataContext", while a TextBox defaults to Text, a Selector to SelectedItem, etc. The same happens when using a reference to another named control in the View instead of $this. The following: <Button cal:Message.Attach="Click = MyAction(someTextBox)" /> causes CM to pass the Text contained in the TextBox named "someTextBox" to MyAction. The reason why the actual control is never passed to the action is that VMs should never directly deal with UI elements, so the convention discourages it. Note, however, that the control itself could easily be accessed anyway using the extended syntax (based on System.Windows.Interactivity) to populate the parameters, or customizing the Parser.
 
+#### Enum values
+
+If you want to pass Enum values as a parameteryou need to pass the value as an (uppercase) string:
+
+``` xml
+...
+<Fluent:Button Header="Go!" cal:Message.Attach="[Event Click] = [Action MethodWithEnum('MONKEY')]" />
+```
+
+``` csharp
+public enum Animals
+{
+  Unicorn,
+  Monkey,
+  Dog
+}
+
+public class MyViewModel
+{ 
+    pubilc void MethodWithEnum(Animals a)
+    {
+         Animals myAnimal = a;
+    }
+}
+```
+
 ##### Word to the Wise
 Parameters are a convenience feature. They are very powerful and can help you out of some tricky spots, but they can be easily abused. Personally, I only use parameters in the simplest scenarios. One place where they have worked nicely for me is in login forms. Another scenario, as mentioned previously is Master/Detail operations.
 
