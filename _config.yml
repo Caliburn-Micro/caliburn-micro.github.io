@@ -24,7 +24,7 @@ paginate: 5
 paginate_path: '/announcements/:num'
 
 # Custom vars
-version: 3.0.1
+version: 3.0.2
 
 github:
   repo: https://github.com/caliburn-micro/caliburn.micro
