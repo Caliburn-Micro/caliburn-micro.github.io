@@ -266,6 +266,12 @@ If you’ve read this far, you know that the ConventionManager is leveraged heav
 	 - ApplyStringFormat - Determines whether a custom string format is needed and applies it to the binding. By default, if binding to a DateTime, uses the format "{0:MM/dd/yyyy}".
 	 - ApplyUpdateSourceTrigger - Determines whether a custom update source trigger should be applied to the binding. For WPF, always sets to UpdateSourceTrigger=PropertyChanged. For Silverlight, calls ApplySilverlightTriggers.
 
+ As an example lets change `ConventionManager.Singularize` to use the awesome library [Humanizer](https://github.com/Humanizr/Humanizer).
+
+``` csharp
+ConventionManager.Singularize = original => original.Singularize(inputIsKnownToBePlural: false);
+```
+
 ##### Methods
 
  - AddElementConvention – Adds or replaces an ElementConvention.
