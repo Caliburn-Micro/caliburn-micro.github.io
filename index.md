@@ -1,6 +1,7 @@
 ---
 layout: home
 published: true
+title: Caliburn.Micro &middot; 'Xaml made easy'
 ---
 
 A small, yet powerful framework, designed for building applications across all XAML platforms. Its strong support for MV* patterns will enable you to build your solution quickly, without the need to sacrifice code quality or testability.
