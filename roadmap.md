@@ -39,7 +39,7 @@ Dropping support for Siverlight 5, .NET 4.0 and Windows Phone 8 (Silveright) and
 
 Updating the solution to use the new project build system where the core (currently PCL) can switch to targeting a .NET Standard contract. The individual platform projects may be able to be combined to a single multitarged project ensuring easier maitenance and nuget package creation.
 
-Move the frameworks lifecycle interfaces such as `IActivate` and `IGuardClose` to be asynchronous. The goal will be to have the framework be *async first* everywhere it make sense. This will be a major breaking change.
+Move the frameworks lifecycle interfaces such as `IActivate` and `IGuardClose` to be asynchronous. The goal will be to have the framework be *async first* everywhere it makes sense. This will be a major breaking change.
 
 `4.0.0` will be done on a new branch given there will probably be an extended beta for it.
 
