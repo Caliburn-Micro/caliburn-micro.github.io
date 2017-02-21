@@ -5,7 +5,7 @@ title: Support
 
 Caliburn.Micro is an open source framework licensed under the [MIT License][license] and hosted on [GitHub][github].
 
-Basic support is provided by the community on [Stack Overflow][so] including the core contributors. If you find am issue, want to request a feature or submit a pull request then raise an issue on [GitHub][github].
+Basic support is provided by the community on [Stack Overflow][so] including the core contributors. If you find an issue, want to request a feature or submit a pull request then raise an issue on [GitHub][github].
 
 ## Raising Issues
 
