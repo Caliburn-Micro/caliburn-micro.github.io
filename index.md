@@ -88,20 +88,6 @@ The core contributors to Caliburn.Micro are:
 
 As is with any open source project there are many other contributors, you can see a full list on the [GitHub][contributors]. Apologies if your name was lost during the move between version control systems.
 
-## Sponsors
-These companies have kindly donated time so that some of the above developers can work on extending and supporting Caliburn.Micro.
-
-### [Marker Metro][mm]
-[![Marker Metro](/public/images/marker-metro.png)][mm]
-
-[Marker Metro][mm] is a world-class, award winning 100% Windows apps agency based in Auckland, New Zealand.
-
-### [Blue Spire][bs]
-[![Blue Spire](/public/images/blue-spire.png)][bs]
-
-[Blue Spire][bs] is a Tallahassee, FL. based software development firm specializing in user interface architecture and engineering. [Rob Eisenberg][rob] is currently the lead architect of the [Durandal][durandal] project.
-
-
 [nuget]: http://www.nuget.org/packages/Caliburn.Micro
 [docs]: /documentation
 [support]: /support
