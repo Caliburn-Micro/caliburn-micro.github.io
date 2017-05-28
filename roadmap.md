@@ -7,29 +7,15 @@ Below is a rough roadmap for the future direction of Caliburn.Micro. This will b
 
 The list has been broken down into sections, some of which can be done in parallel and some sequentially. Each will have a rough overview of what's covered and any development notes around approach.
 
-## Samples
-
-There's a [`samples`][samples] branch which contains a restructure of the sample projects. The main goals of these samples are:
-
-1. Demonstrate initial setup on all supported platforms.
-2. Demonstrate all major features on all supported platforms.
-3. Show platform specific features on the framework such as *Key Binding in WPF*
-4. Highlight *one off scenarios* such as *using a different IoC container* or *F#*.
-5. Demonstrate some scenarios around sharing code over multiple platforms.
-
-What's left here is polish the new samples filling in the gaps and extracting the rough setup notes on the branch into usable documentation for the website.
-
 ## Templates
 
 The setup samples above can potentially be used as the basis for project templates, allowing the removal the rather useless `Caliburn.Micro.Start` package.
 
 Ideally there would be some transformation script possible to take the samples and build project templates from them rather than maintain two different versions of a basic setup project.
 
-From here a Visual Studio extension can be created to allow easy install of these templates.
+With the [dotnet/templating](templating) project that sits behind `dotet new` shows some promise as a way forward rather than using the current template projects and extensions in order to generate these templates from the projects the existing samples
 
-## 3.1.0
-
-`3.1.0` should be the next release of the framework which a rough list of features under the [milestone][3.1.0] on GitHub. This list needs to be revaluated to see whether they make sense giving the ongoing work in `4.0.0`.
+Also adding a Caliburn.Micro extension to the [Windows Template Studio](wts) would be a welcome addition.
 
 ## 4.0.0
 
@@ -43,10 +29,20 @@ Move the frameworks lifecycle interfaces such as `IActivate` and `IGuardClose` t
 
 `4.0.0` will be done on a new branch given there will probably be an extended beta for it.
 
+## Intrastructure
+
+Also required for the long term health of the project is some investment in the general infrastrucutre that makes an open source project healthy. These inlucde
+
+- Automated CI on all commits and PR's.
+- Automated UI tests on the features projects.
+- More exhaustive unit tests.
+- Stickers!
+
 ## Website and documentation overhaul
 
 A lot of the documentation was written by Rob quite a while ago as a series of blog posts with new pages added as other platforms came onboard.  It badly needs a restrucure to be more consistent.
 
-[samples]: https://github.com/Caliburn-Micro/Caliburn.Micro/tree/samples
 [3.1.0]: https://github.com/Caliburn-Micro/Caliburn.Micro/milestones/v3.1.0
 [4.0.0]: https://github.com/Caliburn-Micro/Caliburn.Micro/milestones/v4.0.0
+[templating]: https://github.com/dotnet/templating/
+[wts]: https://github.com/Microsoft/WindowsTemplateStudio
