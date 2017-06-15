@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -40,14 +40,14 @@
      guidetolerance="10"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
+     inkscape:window-width="1858"
+     inkscape:window-height="1177"
      id="namedview3340"
      showgrid="false"
      inkscape:zoom="8.8333333"
      inkscape:cx="9.9819371"
-     inkscape:cy="10.793268"
-     inkscape:window-x="-8"
+     inkscape:cy="19.849872"
+     inkscape:window-x="54"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg3336"
@@ -58,28 +58,17 @@
      id="path3338"
      style="fill:#808080"
      inkscape:connector-curvature="0" />
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-weight:900;font-size:40px;line-height:125%;font-family:'Segoe UI';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'Segoe UI Heavy';font-stretch:normal;font-variant:normal;"
-     x="3.7358491"
-     y="11.773585"
-     id="text3346"
-     sodipodi:linespacing="125%"><tspan
-       sodipodi:role="line"
-       id="tspan3348"
-       x="3.7358491"
-       y="11.773585"></tspan></text>
-  <text
-     xml:space="preserve"
+  <g
+     transform="scale(1.0659056,0.93816938)"
      style="font-style:normal;font-weight:normal;font-size:7.00634384px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="1.8993815"
-     y="23.022242"
-     id="text3350"
-     sodipodi:linespacing="125%"
-     transform="scale(1.0659056,0.93816938)"><tspan
-       sodipodi:role="line"
-       id="tspan3352"
-       x="1.8993815"
-       y="23.022242"
-       style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Heavy';fill:#ffffff">CM</tspan></text>
+     id="text3350">
+    <path
+       d="m 6.0320296,22.88882 q -0.6089498,0.218948 -1.4060582,0.218948 -0.7834242,0 -1.3513212,-0.297633 -0.567897,-0.301053 -0.8689509,-0.851845 -0.2976327,-0.554213 -0.2976327,-1.276058 0,-0.776582 0.3352645,-1.382111 0.3352645,-0.605528 0.9476353,-0.933951 0.6123709,-0.331843 1.4094794,-0.331843 0.6363183,0 1.2315838,0.153948 l 0,1.365005 Q 5.8267657,19.430122 5.5428172,19.361701 5.2588687,19.293279 4.968078,19.293279 q -0.6021077,0 -0.9510564,0.345528 -0.3455277,0.345528 -0.3455277,0.937372 0,0.588424 0.3455277,0.93053 0.3489487,0.338686 0.93053,0.338686 0.5371074,0 1.084478,-0.273686 l 0,1.317111 z"
+       style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Heavy';fill:#ffffff"
+       id="path3339" />
+    <path
+       d="m 11.29363,23.022242 0,-2.688959 q 0,-0.379738 0.02395,-0.83474 l 0.01026,-0.22579 -0.04105,0 q -0.109475,0.57816 -0.167633,0.800529 l -0.721845,2.94896 -1.3889526,0 -0.7560557,-2.914749 q -0.03079,-0.109474 -0.1607901,-0.83474 l -0.041053,0 q 0.047895,1.149478 0.047895,1.436848 l 0,2.312641 -1.2965841,0 0,-4.90581 2.2134299,0 0.6739501,2.665011 q 0.023947,0.08211 0.061579,0.335265 0.041053,0.249737 0.051316,0.38658 l 0.020526,0 q 0.037632,-0.311317 0.1197373,-0.735529 l 0.6294765,-2.651327 2.179219,0 0,4.90581 -1.457374,0 z"
+       style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Heavy';fill:#ffffff"
+       id="path3341" />
+  </g>
 </svg>
