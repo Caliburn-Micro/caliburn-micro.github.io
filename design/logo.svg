@@ -25,34 +25,17 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <defs
-     id="defs3342" />
-  <sodipodi:namedview
-     pagecolor="#202020"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="1"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1858"
-     inkscape:window-height="1177"
-     id="namedview3340"
-     showgrid="false"
-     inkscape:zoom="8.8333333"
-     inkscape:cx="9.9819371"
-     inkscape:cy="19.849872"
-     inkscape:window-x="54"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg3336"
-     units="mm"
-     showborder="false" />
+  <rect
+     style="fill:#202020;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     id="rect3344"
+     width="24"
+     height="24"
+     x="0"
+     y="0" />
   <path
      d="m 6.686047,5.5069601 -2.1719354,0 10.1809484,9.4744359 1.131218,-0.989553 m 5.610834,6.379452 -0.95022,0.884282 c -0.441176,0.410557 -1.153842,0.410557 -1.595018,0 l -3.529395,-3.28447 -3.03166,2.800221 -1.595017,-1.484329 1.606329,-1.494855 -10.090452,-9.3902183 0,-5.0003958 5.3732785,0 10.0904525,9.3902201 1.606328,-1.494858 1.595015,1.484328 -3.020349,2.810751 3.529398,3.284469 c 0.452484,0.421087 0.452484,1.084296 0.01135,1.494855 z"
      id="path3338"
