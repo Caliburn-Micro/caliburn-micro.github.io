@@ -88,6 +88,10 @@ The core contributors to Caliburn.Micro are:
 
 As is with any open source project there are many other contributors, you can see a full list on the [GitHub][contributors]. Apologies if your name was lost during the move between version control systems.
 
+## Sponsorship
+
+We'd like to thank the people at [Jetbrains][jb] for providing licenses for [Resharper][resharper] to the team.
+
 [nuget]: http://www.nuget.org/packages/Caliburn.Micro
 [docs]: /documentation
 [support]: /support
@@ -99,3 +103,5 @@ As is with any open source project there are many other contributors, you can se
 [thomas]: https://twitter.com/thomasibel
 [contributors]: https://github.com/Caliburn-Micro/Caliburn.Micro/graphs/contributors
 [durandal]: http://durandaljs.com/
+[jb]: https://www.jetbrains.com/
+[resharper]: https://www.jetbrains.com/resharper/
