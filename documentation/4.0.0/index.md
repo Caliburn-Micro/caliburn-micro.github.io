@@ -35,4 +35,4 @@ The platforms targeted have been changed to support the new .NET ecosystem. Thes
 
 The Event Aggregator is the first class to go through major breaking changes, this brings it into a "async first" approach that is the main reason for 4.0.0.
 
-The full changes are available in the [event aggregator migration documentation](./documentation/4.0.0/event-aggregator).
+The full changes are available in the [event aggregator migration documentation](/documentation/4.0.0/event-aggregator).
