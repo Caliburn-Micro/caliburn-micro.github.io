@@ -45,7 +45,7 @@ public Task HandleAsync(ProductSelectedMessage message, CancellationToken cancel
 The publish method (and all overloads) now returns a `Task` that completes when all handling methods have finished.
 
 ## Subscription marshalling
-Previous all thread marshalling was handled by publishing and the following methods.
+Previously all thread marshalling was handled by publishing and the following methods.
 
 1. `PublishOnCurrentThreadAsync`.
 2. `PublishOnBackgroundThreadAsync`.
@@ -57,4 +57,4 @@ We're now adding similar functionality to subscriptions and the following method
 2. `SubscribeOnBackgroundThread`.
 2. `SubscribeOnUIThread`.
 
-It's advised that you decide on marshing at one end and follow that consistently through the app.
+It's advised that you decide on marshalling at one end and follow that consistently through the app.
