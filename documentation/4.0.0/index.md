@@ -14,7 +14,7 @@ Given this we've dropped support for the following platforms.
 - Windows Phone 8 (Windows Runtime)
 - Windows 8.1
 
-We'll also be discontining support for .NET 4.0 for WPF.
+We'll also be discontining support for .NET 4.0 for WPF. The minimum version of .NET for WPF is now 4.5.
 
 All of these platforms are still supported in the 3.x releases.
 
