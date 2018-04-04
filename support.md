@@ -15,7 +15,7 @@ The following information is incredibly helpful when raising issues:
 - **Steps** - Steps on recreating the issue.
 - **Sample Project** - Even better that reproduction steps is a sample project that highlights the issue.
 
-## Hoe to contribute
+## How to contribute
 
 Thanks for wanting to contribute to Caliburn.Micro. Contributions don't need to take the form of code, submitting issues and writing documentation is just as important.
 
