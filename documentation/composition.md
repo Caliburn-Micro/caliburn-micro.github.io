@@ -272,7 +272,7 @@ I’ve tried to keep it simple so far, but that’s not the case for our next sa
 
 This sample is based loosely on the ideas demonstrated by Billy Hollis in this well-known DNR TV episode. Rather than take the time to explain what the UI does, [have a look at this short video for a brief visual explanation](http://vimeo.com/16975621).
 
-![Hybrid](/public/images/documentation/hybird.jpg)
+![Hybrid](/public/images/documentation/hybrid.jpg)
 
 Ok, now that you’ve seen what it does, let’s look at how it’s put together. As you can see from the screenshot, I’ve chosen to organize the project by features: Customers, Orders, Settings, etc. In most projects I prefer to do something like this rather than organizing by “technical” groupings, such as Views and ViewModels. If I have a complex feature, then I might break that down into those areas.
 
