@@ -55,6 +55,6 @@ While all the Views and ViewModels of many applications may reside in a single a
 |-|------------|------|
 | Convention | &lt;RootNS&gt;.ViewModels.&lt;ChildNS&gt;.&lt;ViewModelTypeName&gt; | &lt;RootNS&gt;.Views.&lt;ChildNS&gt;.&lt;ViewTypeName&gt; |
 | Example 1 | MyProject.ViewModels.ShellViewModel | MyProject.Views.ShellView |
-| Example 2 | MyProject.ViewModels.Utilities.SettingsViewModel | MyPoject.Views.Utitlities.SettingsView |
+| Example 2 | MyProject.ViewModels.Utilities.SettingsViewModel | MyProject.Views.Utitlities.SettingsView |
 
 While the convention above covers many possibilities in terms of how deeply-nested namespaces may be, it does, however, assume a parallel structure in the organizational scheme of both the Views and ViewModels. Furthermore, it is also quite common to place Views and ViewModels into separate assemblies, which makes the likelihood of parallel organization across different assemblies even less likely.
