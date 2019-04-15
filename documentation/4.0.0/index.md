@@ -28,11 +28,16 @@ The platforms targeted have been changed to support the new .NET ecosystem. Thes
 
 - Caliburn.Micro.Core targets .NET Standard 1.0.
 - Caliburn.Micro.Platform.Xamarin.Forms targets .NET Standard 1.4.
-- Caliburn.Micro.Platform is consistently named across all platforms (previosly UWP includes the platform name).
-
+- Caliburn.Micro.Platform is consistently named across all platforms (previosly UWP included the platform name).
 
 ### Event Aggregator
 
-The Event Aggregator is the first class to go through major breaking changes, this brings it into a "async first" approach that is the main reason for 4.0.0.
+The Event Aggregator is the first class to go through major breaking changes, this brings it into an async implementation approach that is the main reason for 4.0.0.
 
 The full changes are available in the [event aggregator migration documentation](/documentation/4.0.0/event-aggregator).
+
+### Screens and view model lifecyle
+
+All the interfces that support view model lifecycle such as `IActivate` and `IGuardClose` now support an async implemtation.
+
+The full changes are available in the [Screen migration documentation](/documentation/4.0.0/screen).
