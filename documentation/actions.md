@@ -183,7 +183,7 @@ public enum Animals
 
 public class MyViewModel
 { 
-    pubilc void MethodWithEnum(Animals a)
+    public void MethodWithEnum(Animals a)
     {
          Animals myAnimal = a;
     }
