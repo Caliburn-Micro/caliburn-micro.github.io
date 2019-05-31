@@ -48,7 +48,7 @@ In case it isn’t obvious, this framework enables MVVM. MVVM isn’t hard on it
 
 Just to be clear, this isn’t a toy framework. As I said, I really focused on supporting the core and most commonly used features from Caliburn v2. In fact, Caliburn.Micro is going to be my default framework moving forward and I recommend that if you are starting a new project you begin with the Micro framework. I’ve been careful to keep the application developer API consistent with the full version of Caliburn. In fact, the improvements I made in Caliburn.Micro are being folded back into Caliburn v2. What’s the good part about that? You can start developing with Caliburn.Micro, then if you hit edge cases or have some other need to move to Caliburn, you will be able to do so with little or no changes in your application.
 
-Keeping with the spirit of “Build Your Own…” I want developers to understand how this little framework works, inside and out. I’ve intentionally chosen Mercurial for source control, because I want developers to take ownership. While I’ve done some work to make the most important parts of the framework extensible, I’m hoping to see many Forks, and looking forward to seeing your Pull requests.
+Keeping with the spirit of “Build Your Own…” I want developers to understand how this little framework works, inside and out. I’ve intentionally chosen Git for source control, because I want developers to take ownership. While I’ve done some work to make the most important parts of the framework extensible, I’m hoping to see many Forks, and looking forward to seeing your Pull requests.
 
 [mix]: http://live.visitmix.com/MIX10/Sessions/EX15
 [caliburn]: http://caliburn.codeplex.com/
