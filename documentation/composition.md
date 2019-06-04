@@ -232,7 +232,7 @@ Those are the main scenarios. Hopefully you can see some of the differences from
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding DisplayName}" />
                         <Button Content="X"
-                                cal:Message.Attach="CloseItem($dataContext)" />
+                                cal:Message.Attach="DeactivateItem($dataContext, 'true')" />
                     </StackPanel>
                 </DataTemplate>
             </TabControl.ItemTemplate>
