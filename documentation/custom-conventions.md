@@ -10,7 +10,7 @@ In recognition of these limitations, we have added configurability and several h
 
 Before introducing these new methods of the locator classes, it would be appropriate to discuss terminology.
 
-**Name transformation** is a general term used to describe how type resolution is done. A type's fully qualified name is taken as the source and then "transformed" into the name of the output type. At the lowest level, the NameTransfomer class is responsible for this action and performs the transformation using regular expression-based "transformation rules". 
+**Name transformation** is a general term used to describe how type resolution is done. A type's fully qualified name is taken as the source and then "transformed" into the name of the output type. At the lowest level, the NameTransformer class is responsible for this action and performs the transformation using regular expression-based "transformation rules". 
 
 **Type mapping** is a term to describe the new capabilities that were added to the locator classes. Creating a type mapping is considered a higher-level operation because type mappings contemplate the two facets of type resolution: resolving the type's name and resolving the type's namespace. Although a type mapping is ultimately expressed as a transformation rule for the NameTransformer, the methods for creating type mappings were intended to relieve you of having to understand regular expressions in addition to being more domain-specific.
 
@@ -208,7 +208,7 @@ An array can be passed as an argument for the target namespaces to indicate that
 
 ``` csharp
 //"Append target to source" mapping
-//Null string or String.Empty passed as source namespace is special case to allowe this
+//Null string or string.Empty passed as source namespace is special case to allow this
 //Note the need to prepend target namespace with "." to make this work
 ViewLocator.AddNamespaceMapping("", ".Views");
 //Resolves: MyProject.Customers.CustomerViewModel -> MyProject.Customers.Views.CustomerView

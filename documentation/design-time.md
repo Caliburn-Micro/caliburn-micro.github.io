@@ -5,7 +5,7 @@ title: Design Time support
 
 Enabling Caliburn.Micro inside the Visual Studio designer (or Blend) is quite easy.
 
-You have to set a Desinger-DataContext and tell CM to enable its magic in your view XAML:
+You have to set a Designer-DataContext and tell CM to enable its magic in your view XAML:
 
 ``` csharp
 <Window 

@@ -33,7 +33,7 @@ public class HelloWP7Bootstrapper : PhoneBootstrapperBase {
     }  
   
     static void AddCustomConventions() {  
-        //ellided  
+        //elided  
     }  
   
     protected override object GetInstance(Type service, string key) {  

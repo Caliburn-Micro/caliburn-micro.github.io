@@ -14,7 +14,7 @@ Given this we've dropped support for the following platforms.
 - Windows Phone 8 (Windows Runtime)
 - Windows 8.1
 
-We'll also be discontining support for .NET 4.0 for WPF. The minimum version of .NET for WPF is now 4.5.
+We'll also be discontinuing support for .NET 4.0 for WPF. The minimum version of .NET for WPF is now 4.5.
 
 All of these platforms are still supported in the 3.x releases.
 
@@ -28,7 +28,7 @@ The platforms targeted have been changed to support the new .NET ecosystem. Thes
 
 - Caliburn.Micro.Core targets .NET Standard 1.0.
 - Caliburn.Micro.Platform.Xamarin.Forms targets .NET Standard 1.4.
-- Caliburn.Micro.Platform is consistently named across all platforms (previosly UWP included the platform name).
+- Caliburn.Micro.Platform is consistently named across all platforms (previously UWP included the platform name).
 
 ### Event Aggregator
 
@@ -38,6 +38,6 @@ The full changes are available in the [event aggregator migration documentation]
 
 ### Screens and view model lifecyle
 
-All the interfces that support view model lifecycle such as `IActivate` and `IGuardClose` now support an async implemtation.
+All the interfaces that support view model lifecycle such as `IActivate` and `IGuardClose` now support an async implementation.
 
 The full changes are available in the [Screen migration documentation](/documentation/4.0.0/screen).

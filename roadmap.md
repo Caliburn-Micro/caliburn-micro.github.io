@@ -31,7 +31,7 @@ Move the frameworks lifecycle interfaces such as `IActivate` and `IGuardClose` t
 
 ## Intrastructure
 
-Also required for the long term health of the project is some investment in the general infrastrucutre that makes an open source project healthy. These inlucde
+Also required for the long term health of the project is some investment in the general infrastructure that makes an open source project healthy. These include
 
 - Automated CI on all commits and PR's.
 - Automated UI tests on the features projects.
@@ -40,7 +40,7 @@ Also required for the long term health of the project is some investment in the 
 
 ## Website and documentation overhaul
 
-A lot of the documentation was written by Rob quite a while ago as a series of blog posts with new pages added as other platforms came onboard.  It badly needs a restrucure to be more consistent.
+A lot of the documentation was written by Rob quite a while ago as a series of blog posts with new pages added as other platforms came onboard. It badly needs a restructure to be more consistent.
 
 [3.1.0]: https://github.com/Caliburn-Micro/Caliburn.Micro/milestones/v3.1.0
 [4.0.0]: https://github.com/Caliburn-Micro/Caliburn.Micro/milestones/v4.0.0
