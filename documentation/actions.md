@@ -166,7 +166,7 @@ When you don't specify a property, CM uses a default one, which is specified by 
 
 #### Enum values
 
-If you want to pass Enum values as a parameteryou need to pass the value as an (uppercase) string:
+If you want to pass Enum values as a parameter, you need to pass the value as an (uppercase) string:
 
 ``` xml
 ...

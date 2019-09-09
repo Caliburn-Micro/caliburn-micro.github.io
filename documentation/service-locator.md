@@ -7,7 +7,7 @@ Caliburn.Micro comes pre-bundled with a static Service Locator called IoC. For t
 
 ### Getting Started
 
-IoC is the static entity used for Service Location in Caliburn.Micro, this enables IoC to work with static entites such as dependency properties with ease. The public definition of IoC is shown below.
+IoC is the static entity used for Service Location in Caliburn.Micro, this enables IoC to work with static entities such as dependency properties with ease. The public definition of IoC is shown below.
 
 ``` csharp
 public static class IoC {
