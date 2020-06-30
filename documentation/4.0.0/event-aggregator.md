@@ -4,7 +4,7 @@ title: The Event Aggregator
 ---
 
 ## Handle Interfaces
-In order to simply things and provide some consistent behavior we've moved back to a single interface which is similar to the old `IHandleWithTask`.
+The use of async/await allows the combining of IHandleWithTask, IHandleWithCoroutine and IHandle into a single interface to provide consistent behaviour. 
 
 ``` csharp
 public interface IHandle<TMessage>
@@ -13,14 +13,48 @@ public interface IHandle<TMessage>
 }
 ```
 
-Moving from the old `IHandle` interface should just involve adding
+This does mean that every class using one of these interfaces will require some minor modifications.
+Changes in how a class subscribes to events are detailed in a separate section in this document.
 
+### IHandle implementations
+
+3.2.0
 ``` csharp
-return Task.CompletedTask;
+public void Handle(MyNotification message)
+{
+    ... do something ...
+}
 ```
 
-If you're migrating from `IHandleWithCoroutine` then you can move from something like
+4.0.0 (equivalent behaviour)
+``` csharp
+public async Task HandleAsync(MyNotification message, CancellationToken cancellationToken)
+{
+    ... do something ...
+    return Task.CompleteTask;
+}
+```
+### IHandleWithTask implementations
 
+3.2.0
+``` csharp
+public async Task Handle(MyNotification message)
+{
+   await Task.Delay(3000);
+}
+```
+
+4.0.0
+``` csharp
+public Task HandleAsync(MyNotification message, CancellationToken cancellationToken)
+{
+    await Task.Delay(3000, cancellationToken);
+}
+```
+
+### IHandleWithCoroutine implementations
+
+3.2.0
 ``` csharp
 public IEnumerable<IResult> Handle(ProductSelectedMessage message)
 {
@@ -29,8 +63,7 @@ public IEnumerable<IResult> Handle(ProductSelectedMessage message)
 }
 ```
 
-to
-
+4.0.0
 ``` csharp
 public Task HandleAsync(ProductSelectedMessage message, CancellationToken cancellationToken);
 {
