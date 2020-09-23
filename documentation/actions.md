@@ -124,7 +124,7 @@ There are a few things to note here. First, we are now working with a completely
 <UserControl x:Class="Caliburn.Micro.HelloParameters.ShellView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:cal="http://www.caliburnproject.org">
     <StackPanel>
         <TextBox x:Name="Name" />
