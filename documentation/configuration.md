@@ -7,7 +7,7 @@ Starting a project:
 
 2. Create a new WPF Application called “Caliburn.Micro.Hello” 
 
-3. Add a reference to the Caliburn.Micro Nuget package. You can find it on [Nuget.org](https://www.nuget.org/packages/Caliburn.Micro). 
+3. Add a reference to the Caliburn.Micro Nuget package. You can find it on ![Nuget.org](https://www.nuget.org/packages/Caliburn.Micro). 
 
 4. Delete “MainWindow.xaml” and remove the `StartupUri` from your “App.xaml” so that it looks like this:
 
@@ -104,7 +104,7 @@ Next, we need to implement the "HelloBootstrapper" so it will run at startup.
 
 All we have to do is place a Caliburn.Micro bootstrapper in the Application.Resources and it will do the rest of the work. Now, run the application. You should see something like this:
 
-![View not found](/public/images/documentation/view-not-found.jpg)
+![View not found](/public/images/documentation/view-not-found.png)
 
 Caliburn.Micro creates the ShellViewModel, but doesn’t know how to render it without a view. So, let’s create a view for it to find.
 
