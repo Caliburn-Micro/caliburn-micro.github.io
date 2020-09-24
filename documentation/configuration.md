@@ -23,6 +23,7 @@ Starting a project:
 ```
 
 Since Caliburn.Micro prefers a ViewModel-First approach, let’s start there. 
+
 5. Create your first ViewModel, create a new class and call it "ShellViewModel". 
 
 6. Open your ShellViewModel.cs and use the following code for the implementation:
@@ -105,7 +106,8 @@ All we have to do is place a Caliburn.Micro bootstrapper in the Application.Reso
 
 ![View not found](/public/images/documentation/view-not-found.jpg)
 
-Caliburn.Micro creates the ShellViewModel, but doesn’t know how to render it without a view. So, let’s create a view for it to find. 
+Caliburn.Micro creates the ShellViewModel, but doesn’t know how to render it without a view. So, let’s create a view for it to find.
+
 9. Create a new User Control (WPF) named "ShellView". Use the following xaml:
 
 ``` xml
@@ -136,4 +138,14 @@ Typing something in the TextBox will trigger the `CanSayHello` property and enab
 ![View with data](/public/images/documentation/view-with-data.png)
 
 #### How it works
-Caliburn.Micro uses a simple naming convention to locate Views for ViewModels. Essentially, it takes the FullName and removes “Model” from it. So, given MyApp.ViewModels.MyViewModel, it would look for MyApp.Views.MyView. Looking at the View and ViewModel side-by-side, you can see that the TextBox with x:Name=”Name” is bound to the “Name” property on the VM. You can also see that the Button with x:Name=”SayHello” is bound to the method with the same name on the ViewMModel. The `CanSayHello` property is guarding access to the `SayHello` action by disabling the Button. These are the basics of Caliburn.Micro’s ActionMessage and Conventions functionality. There’s much more to show. Next, we can integrate an IoC container such as MEF.
+Caliburn.Micro uses a simple naming convention to locate Views for ViewModels. Essentially, it takes the FullName and removes “Model” from it.
+
+So, given: 
+`MyApp.ViewModels.MyViewModel`
+
+It would look for:
+`MyApp.Views.MyView`
+
+Looking at the View and ViewModel side-by-side, you can see that the TextBox with x:Name=”Name” is bound to the “Name” property on the ViewModel. You can also see that the Button with x:Name=”SayHello” is bound to the method with the same name on the ViewMModel. The `CanSayHello` property is guarding access to the `SayHello` action by disabling the Button. These are the basics of Caliburn.Micro’s ActionMessage and Conventions functionality. 
+
+There’s much more to show. Next, we can integrate an IoC container such as MEF.
