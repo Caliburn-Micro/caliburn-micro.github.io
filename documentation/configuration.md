@@ -2,7 +2,7 @@
 layout: page
 title: Basic Configuration, Actions and Conventions
 ---
-Starting a project:
+### Starting a project:
 1. Open Visual Studio 
 
 2. Create a new WPF Application called “Caliburn.Micro.Hello” 
@@ -60,9 +60,10 @@ namespace Caliburn.Micro.Hello.ViewModels
     }
 ```
 
->Notice that the ShellViewModel inherits from PropertyChangedBase. This is a Caliburn.Micro base class that implements the infrastructure for property change notification and automatically performs UI thread marshalling. It will come in handy :)
+Notice that the ShellViewModel inherits from PropertyChangedBase. This is a base class that implements the infrastructure for property change notification and automatically performs UI thread marshalling. It will come in handy :)
 
 Now that we have our ViewModel, let’s create the bootstrapper. The Bootstrapper will configure the framework and tell it what to do. 
+
 7. Create a new class named "HelloBootstrapper". You can use this tiny bit of code:
 
 ``` csharp
@@ -82,14 +83,15 @@ namespace Caliburn.Micro.Hello {
 The Bootsrapper allows you to specify the type of root view model using `DisplayRootViewFor<TViewModel>()`. The “root view model” is a ViewModel that Caliburn.Micro will instantiate and use to show your application. 
 
 Next, we need to implement the "HelloBootstrapper" so it will run at startup. 
+
 8. To do that, update your App.xaml to add the bootstrapper to your resources, like this:
 
 #### WPF
 ``` xml
-<Application x:Class="Caliburn.Micro.Hello.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Caliburn.Micro.Hello">
+             xmlns:local="clr-namespace:Caliburn.Micro.Hello"
+             x:Class="Caliburn.Micro.Hello.App">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -114,12 +116,7 @@ Caliburn.Micro creates the ShellViewModel, but doesn’t know how to render it w
 <UserControl x:Class="Caliburn.Micro.Hello.ShellView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Caliburn.Micro.Hello"
-             mc:Ignorable="d"
-             d:DesignHeight="200"
-             d:DesignWidth="300">
+             Height="450" Width="800">
     <StackPanel>
         <Label Content="Hello please write your name" />
         <TextBox x:Name="Name" />
@@ -129,11 +126,11 @@ Caliburn.Micro creates the ShellViewModel, but doesn’t know how to render it w
 </UserControl>
 ```
 
-Run the application again. You should now see the View show up:
+Run the application again. You should now see the UI:
 
 ![View found](/public/images/documentation/view-found.png)
 
-Typing something in the TextBox will trigger the `CanSayHello` property and enable the Button. Clicking the button will show our `Name` property in the message:
+Typing something in the TextBox will enable the Button and clicking it will show a message:
 
 ![View with data](/public/images/documentation/view-with-data.png)
 
