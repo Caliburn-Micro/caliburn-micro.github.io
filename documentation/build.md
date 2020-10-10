@@ -10,16 +10,9 @@ title: Obtain and build the code
 >We recommend you use [GitHub Desktop client][gd], [GitKracken][gk] or [GitAhead][ga].
 
 
-- [Want to checkout the project](#want-to-checkout-the-project)
-  - [You can build it from source](#you-can-build-it-from-source)
-  - [Caliburn.Micro uses Git for source control.](#caliburnmicro-uses-git-for-source-control)
 - [Get the code](#get-the-code)
-  - [1. Via the Caliburn.Micro git repository](#1-via-the-caliburnmicro-git-repository)
-  - [2. Via the Caliburn.Micro git release page](#2-via-the-caliburnmicro-git-release-page)
 - [Build the code](#build-the-code)
 - [Troubleshooting](#troubleshooting)
-  - [Projects in the solution were not loaded correctly](#projects-in-the-solution-were-not-loaded-correctly)
-  - [Need more help?](#need-more-help)
 
 
 ## Get the code
