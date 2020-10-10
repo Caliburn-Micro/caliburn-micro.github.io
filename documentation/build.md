@@ -39,9 +39,9 @@ title: Obtain and build the code
 
 ## Troubleshooting
 ### Projects in the solution were not loaded correctly
-* Problem: 
+- Problem: 
   * When opening Caliburn.Micro.sln the project files show up as unloaded with the following error: `error  : The expression "[System.IO.Path]::GetDirectoryName('')" cannot be evaluated. The path is not of a legal form.`
-* Solution:
+- Solution:
   1. Close the project solution
   1. Open a terminal (powershell or command prompt)
   1. Find your .NET version by typing:
