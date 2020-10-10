@@ -84,7 +84,7 @@ public class CartSummaryViewModel : IHandle<CartChangedMessage>
 ## Who's Behind It
 The core contributors to Caliburn.Micro are:
 
- - [Ken Tucker][kt] - New Maintainer, Microsoft MVP, User group leader, Mobile Developer
+ - [Ken Tucker][kt] - New Maintainer, Microsoft MVP from 2003 to 2016, User group leader, Mobile Developer
  - [KasperSK][ksk] - Lead Documentation editor, mysterious
  - [Corey Vincent][cv] - Documentation editor, dynamic full stack developer
  - [Nigel Sampson][nigel] - Previous Project coordinator and responsible for the ports to new Xaml platforms such as Windows 8 and Windows Phone 8.1 / Universal Apps.
