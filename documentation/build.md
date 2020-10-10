@@ -43,8 +43,8 @@ title: Obtain and build the code
   * When opening Caliburn.Micro.sln the project files show up as unloaded with the following error: `error  : The expression "[System.IO.Path]::GetDirectoryName('')" cannot be evaluated. The path is not of a legal form.`
 * Solution:
   1. Close the project solution
-  2. Open a terminal (powershell or command prompt)
-  3. Find your .NET version by typing:
+  1. Open a terminal (powershell or command prompt)
+  1. Find your .NET version by typing:
    ``` shell
    dotnet --version
    ```
@@ -52,7 +52,7 @@ title: Obtain and build the code
    ```shell
    3.1.402
    ```
-  4. In the Caliburn.Micro\sln folder open the Global.json file and edit the "sdk" to match your dotnet version.
+  1. In the Caliburn.Micro\sln folder open the Global.json file and edit the "sdk" to match your dotnet version.
      - example (original):
      ```
      {
@@ -64,7 +64,7 @@ title: Obtain and build the code
         }
      }  
      ```
-     - example (edited):
+       - example (edited):
      ```
      {
      "sdk": {
@@ -75,7 +75,7 @@ title: Obtain and build the code
         }
      }  
      ``` 
-  5. Reload your project
+  1. Reload your project
    
 ### Need more help?
 * Post a question on [stackoverflow][so] with the tag [Caliburn.Micro]
