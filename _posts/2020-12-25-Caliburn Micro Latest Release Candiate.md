@@ -1,4 +1,4 @@
-# Caliburn Micro Lastest Release Candiate 
+# Caliburn Micro Latest Release Candiate 
 
 
 ## Included in this release
