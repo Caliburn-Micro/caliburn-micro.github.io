@@ -9,9 +9,10 @@ We briefly introduced actions in [Pt. 1](./configuration), but there is so much 
 <UserControl x:Class="Caliburn.Micro.Hello.ShellView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:cal="http://www.caliburnproject.org">
     <StackPanel>
+        <Label Content="Hello please write your name" />
         <TextBox x:Name="Name" />
         <Button Content="Click Me">
             <i:Interaction.Triggers>
@@ -24,13 +25,19 @@ We briefly introduced actions in [Pt. 1](./configuration), but there is so much 
 </UserControl> 
 ```
 
-As you can see, the Actions feature leverages System.Windows.Interactivity for it’s trigger mechanism. This means that you can use anything that inherits from System.Windows.Interactivity.TriggerBase to trigger the sending of an ActionMessage.1 Perhaps the most common trigger is an EventTrigger, but you can create almost any kind of trigger imaginable or leverage some common triggers already created by the community. ActionMessage is, of course, the Caliburn.Micro-specific part of this markup. It indicates that when the trigger occurs, we should send a message of “SayHello.” So, why do I use the language “send a message” instead of “execute a method” when describing this functionality? That’s the interesting and powerful part. ActionMessage bubbles through the Visual Tree searching for a target instance that can handle it. If a target is found, but does not have a “SayHello” method, the framework will continue to bubble until it finds one, throwing an exception if no “handler” is found.2 This bubbling nature of ActionMessage comes in handy in a number of interesting scenarios, Master/Details being a key use case. Another important feature to note is Action guards. When a handler is found for the “SayHello” message, it will check to see if that class also has either a property or a method named “CanSayHello.” If you have a guard property and your class implements INotifyPropertyChanged, then the framework will observe changes in that property and re-evaluate the guard accordingly. We’ll discuss method guards in further detail below.
+As you can see, the Actions feature leverages Microsoft.Xaml.Behaviors for it’s trigger mechanism. This means that you can use anything that inherits from Microsoft.Xaml.Behaviors.TriggerBase to trigger the sending of an ActionMessage.
+
+1 Perhaps the most common trigger is an EventTrigger, but you can create almost any kind of trigger imaginable or leverage some common triggers already created by the community. ActionMessage is, of course, the Caliburn.Micro-specific part of this markup. It indicates that when the trigger occurs, we should send a message of “SayHello.” So, why do I use the language “send a message” instead of “execute a method” when describing this functionality? That’s the interesting and powerful part. ActionMessage bubbles through the Visual Tree searching for a target instance that can handle it. If a target is found, but does not have a “SayHello” method, the framework will continue to bubble until it finds one, throwing an exception if no “handler” is found.
+
+2 This bubbling nature of ActionMessage comes in handy in a number of interesting scenarios, Master/Details being a key use case. Another important feature to note is Action guards. When a handler is found for the “SayHello” message, it will check to see if that class also has either a property or a method named “CanSayHello.” If you have a guard property and your class implements INotifyPropertyChanged, then the framework will observe changes in that property and re-evaluate the guard accordingly. We’ll discuss method guards in further detail below.
 
 ### Action Targets
 
 Now you’re probably wondering how to specify the target of an ActionMessage. Looking at the markup above, there’s no visible indication of what that target will be. So, where does that come from? Since we used a Model-First approach, when Caliburn.Micro (hereafter CM) created the view and bound it to the ViewModel using the ViewModelBinder, it set this up for us. Anything that goes through the ViewModelBinder will have its action target set automatically. But, you can set it yourself as well, using the attached property Action.Target. Setting this property positions an ActionMessage “handler” in the Visual Tree attached to the node on with you declare the property. It also sets the DataContext to the same value, since you often want these two things to be the same. However, you can vary the Action.Target from the DataContext if you like. Simply use the Action.TargetWithoutContext attached property instead. One nice thing about Action.Target is that you can set it to a System.String and CM will use that string to resolve an instance from the IoC container using the provided value as its key. This gives you a nice way of doing View-First MVVM if you so desire. If you want Action.Target set and you want Action/Binding Conventions applied as well, you can use the Bind.Model attached property in the same way.
 
-#### View First
+#### View First 
+
+//Skip this section.
 
 Let’s see how we would apply this to achieve MVVM using a View-First technique (gasp!) Here’s how we would change our bootstrapper:
 
@@ -95,10 +102,8 @@ Notice the use of the Bind.Model attached property. This resolves our VM by key 
 Now, let’s take a look at another interesting aspect of ActionMessage: Parameters. To see this in action, let’s switch back to our original ViewModel-First bootstrapper, etc. and begin by changing our ShellViewModel to look like this: 
 
 ``` csharp
-using System.ComponentModel.Composition;
 using System.Windows;
 
-[Export(typeof(IShell))]
 public class ShellViewModel : IShell
 {
     public bool CanSayHello(string name)
@@ -119,7 +124,7 @@ There are a few things to note here. First, we are now working with a completely
 <UserControl x:Class="Caliburn.Micro.HelloParameters.ShellView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:cal="http://www.caliburnproject.org">
     <StackPanel>
         <TextBox x:Name="Name" />
@@ -189,6 +194,10 @@ public class MyViewModel
     }
 }
 ```
+
+#### Xamarin Forms
+
+For Xamarin Forms only the $this parameter works, this is because traversing the visual tree is a bit different in Xamarin Forms.
 
 ##### Word to the Wise
 Parameters are a convenience feature. They are very powerful and can help you out of some tricky spots, but they can be easily abused. Personally, I only use parameters in the simplest scenarios. One place where they have worked nicely for me is in login forms. Another scenario, as mentioned previously is Master/Detail operations.
