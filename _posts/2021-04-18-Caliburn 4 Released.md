@@ -24,7 +24,7 @@ The platforms targeted have been changed to support the new .NET ecosystem. Thes
 
 * Caliburn.Micro.Core targets .NET Standard 2.0.
 * Caliburn.Micro.Platform.Xamarin.Forms targets .NET Standard 2.0.
-* Caliburn.Micro.Platform is consistently named across all platforms (previously UWP included the platform name).
+* Caliburn.Micro.Platform is consistently named across all platforms (previously UWP included the platform name) except for Xamarin.Forms.
 * Event Aggregator
 
 The Event Aggregator has some major breaking changes, that bring it into an async implementation approach that is the main reason for 4.0.0.
