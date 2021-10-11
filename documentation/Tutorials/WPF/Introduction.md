@@ -9,7 +9,7 @@ title: Introduction
 
 ### What you will learn
 
-In this tutorial you will get a brief introduction to MVVM. It will be discussed if you need an MVVM Framework, especially Caliburn.Micro and how you can be prepared to start using Caliburn.Micro in future.
+In this tutorial you will get a brief introduction to MVVM. It will be discussed if you need an MVVM Framework, especially Caliburn.Micro and how you can be prepared to start using Caliburn.Micro in the future.
 
 You will learn to build a new WPF real world application using Caliburn.Micro from scratch. The learning pace will be slow. We start with simple things and in a fair number of steps more advanced technology will be added.
 

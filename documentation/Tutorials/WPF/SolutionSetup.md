@@ -31,7 +31,7 @@ Before we can adapt the project to a Caliburn.Micro project, it is necessary to 
 
 You need the Caliburn.Micro package, which contains the adapter for WPF.
 
-You may notice a huge number of other packages are list. They look useful, but unfortunately most of them are outdated.
+You may notice a huge number of other packages are listed. They look useful, but unfortunately most of them are outdated.
 
 ### Create the MVVM folders
 

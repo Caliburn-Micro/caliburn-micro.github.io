@@ -8,7 +8,6 @@ title: Category Model and ViewModel
 ## Create a categories user control
 
 In the setup chapter, we created an empty Shell with a placeholder for user controls. In this chapter we will create the first user control and show how to hook it up in the application.
-
 The Categories function allows to define categories for expenses and in the next chapter expenses will be assigned a category.
 
 ### Create a model
@@ -133,14 +132,26 @@ namespace Caliburn.Micro.Tutorial.Wpf.ViewModels
   }
 ```
 
-This is a fairly long code fragment. Now each part of it will be discussed separately. A large part of the ViewModel is dovoted to represent the data you need in the View.
+This is a fairly long code fragment. Now each part of it will be discussed separately. A large part of the ViewModel is devoted to represent the data you need in the View.
 
-The first thing you can see is that the ViewModel inherits from ``Screen`` which is a kind of conductor in Caliburn.Micro. As the name says, it will allow the use of a single user control or window.
+The first thing you can see is that the ViewModel inherits from ``Screen``. As the name says, it will allow the use of a single user control or window. In a later chapter of this tutorial, this will be explained in more detail. You also can read [this article](/documentation/Composition.md) in the documentation.
 
 ``BindableCollection<CategoryModel> CategoryList``
-CategoryList is a List containing all categories. It is used in the DatGrid we will define in the View.
+CategoryList is a List containing all categories. It is used in the ``DataGrid`` we will define in the View.
 
 ``BindableCollection<T>`` is a class derived from ``ObservableCollection<T>`` but has some improvements in event processing at the UI thread. Therefore it is preferred to use a BindableCollection above ``ObservableCollection``.
+
+```csharp
+...
+ if (SelectedCategory!=null)
+        {
+        // remove the existing category, needed to update the view
+        CategoryList.Remove(SelectedCategory);
+        }
+...
+```
+
+This code fragment requires some clarification. ``CategoryList`` represents a refeence variable. The ``NotifyOfPropertyChange`` method cannot look inside it to see if the contents has changed. To solve this, the contents is removed and completely replaced. There is another way to solve this. In this tutorial  another user control using lists will be added. There it will be explained how this issue can be solved. It has some drawbacks, so it is good you can choose which solution to prefer.
 
 There is one more thing to discuss here:
 
@@ -148,7 +159,7 @@ There is one more thing to discuss here:
 
 You see the ``CategoryList`` is instantiated here. This avoids null value exceptions. It is good to know you can do this while creating the property.
 
-``CategoryModel SelectedCategory`` represents the selected item. In the View you must bind it. In non-MVVM solutions you might use an eventhandler to handle selecting an item from a list. Using Caliburn.Micro, we will not do it, but instead we obtain the value and use it in the ViewModel. This separates it nicely from the UI. For example, you now can create a test case where you pick a value, assign it to ``SelectedCategory`` and then use this to drive a test. No need to have a working UI.
+``CategoryModel SelectedCategory`` represents the selected item. In the View you must bind it. In non-MVVM solutions you might use an eventhandler to handle selecting an item from a list. Using Caliburn.Micro, we will not do that, but instead we obtain the value and use it in the ViewModel. This separates it nicely from the UI. For example, you now can create a test case where you pick a value, assign it to ``SelectedCategory`` and then use this to drive a test. No need to have a working UI.
 
 You can edit the data in the DataGrid in the View directly, but here a different technique is used. The idea is that you select an item you want to edit (or create a new one) and then save the changes or discard them. You also can create new values. To support this, we need a copy for each field in the ``CategoryModel``.
 
@@ -169,7 +180,7 @@ The example shows a full property is used. In the setter we use an additional li
 
 This is the Caliburn.Micro way of implementing change notifications. Its use is not restricted to using it in a setter. Any place where you need to tell the UI that a property is changed, just call this method.
 
-Alternatively you can use ``NotifyOfPropertyChange("SelectedCategory");`` which may look more familiar and may be a way to help migrating an existing project to Caliburn.Micro. The advantage of the lambda expression is that the compiler will detect typos for you.
+Alternatively you can use ``NotifyOfPropertyChange("CategoryName");`` which may look more familiar and may be a way to help migrating an existing project to Caliburn.Micro. The advantage of the lambda expression is that the compiler will detect typos for you.
 
 ```csharp
 protected override void OnViewLoaded(object view)

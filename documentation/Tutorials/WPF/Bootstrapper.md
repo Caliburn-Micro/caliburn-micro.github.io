@@ -17,7 +17,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Caliburn.Micro
+using Caliburn.Micro;
 
 namespace Caliburn.Micro.Tutorial.Wpf
   {
@@ -28,7 +28,7 @@ namespace Caliburn.Micro.Tutorial.Wpf
 
   ```
 
-Note: for CSharp 9.0 it appears you do not need a using statement to ``Caliburn.Micro``.
+Note: due to the chosen namespace, the using statement ``using Caliburn.Micro;`` is not needed. In general, you need to include this using statement.
 
 ### Create the constructor
 

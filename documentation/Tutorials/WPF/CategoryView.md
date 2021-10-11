@@ -9,7 +9,7 @@ title: The CategoryView
 
 ### Introduction
 
-The last coding step is to create the ``CategoryView``. Make sure to do int in the Views folder, otherwise it will not work. First let's introduce the code and then the important details will be discussed. In the code there is a lot of stuff that is not really relevant, but necessary to make it look not to bad.
+The last coding step is to create the ``CategoryView``. Make sure to do it in the Views folder, otherwise it will not work. First let's introduce the code and then the important details will be discussed. In the code there is a lot of stuff that is not really relevant, but necessary to make it look not to bad.
 
 ```xml
 <UserControl x:Class="Caliburn.Micro.Tutorial.Wpf.Views.CategoryView"
@@ -90,12 +90,12 @@ An example of the XAML code for a Button is shown below:
 <Button x:Name="Edit" Width="80" Margin="5">Edit</Button>
 ```
 
-What is clearly "missing" here is the OnClick event handler. Caliburn.Micro will try to match the name ``x:Name="Edit"`` with a method name in the corresponding view. Note that the DebugLogger will tell you if it can find a suitable method. This is all you really need to hook a button to the ViewModel.
+What is clearly "missing" here is the OnClick event handler. Caliburn.Micro will try to match the name ``x:Name="Edit"`` with a method name in the corresponding view. Note that the DebugLog will tell you if it can find a suitable method. This is all you really need to hook a button to the ViewModel.
 
 There are frameworks that do not use this magic. In the cases I have seen they use the ICommand interface. You need to add a command both in the XAML code and in the ViewModel code. This is a lot more work to do and this is the Caliburn.Micro feature I can really appreciate. If you introduce a bug, it can be a bit hard to find out what you do wrong. Later some issues will be discussed. It is not always as simple as in this case. A more detailed explanation can be found [here](https://www.tutorialspoint.com/mvvm/mvvm_view_viewmodel_communication.htm).
 
 ### Conclusion
 
-You now can compile and run the code. Basically it works, but it is not robust. Also, to make it an operational and well maintainable program, you still need to do some work. For instance, you should not use hard coded margins and font sizes. That is beyond the scope of this tutorial.
+You now can compile and run the code for this simple example. Also, to make it an operational and well maintainable program, you still need to do some work. For instance, you should not use hard coded margins and font sizes. That is beyond the scope of this tutorial.
 
 [Contents](Contents) [Previous](CategoryEditorHookup) [Next](ConditionalExecution)

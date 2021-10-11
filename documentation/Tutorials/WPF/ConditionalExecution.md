@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Expensesn Logbook introduction
+title: Expenses Logbook introduction
 ---
 
 [Contents](Contents) [Previous](CategoryView) [Next](ConditionalExecution)
@@ -50,7 +50,7 @@ The advantage of this way of working is that you can enforce this from the ViewM
 
 ### Completing the conditions
 
-Using the same principle, execution conditions are added for the Delete and Save button. The ``CanSave`` property checks if you actually created a ``CategoryName`` to avoid the possibility to save empty Categories. Note you need to name sure ``CategorName`` is not null as well.
+Using the same principle, execution conditions are added for the Delete and Save button. The ``CanSave`` property checks if you actually created a ``CategoryName`` to avoid the possibility to save empty Categories. Note you need to name sure ``CategoryName`` is not null as well.
 
 The code for the complete ``CategoryViewModel`` look like this, with the last updates added:
 
