@@ -10,7 +10,7 @@ The list has been broken down into sections, some of which can be done in parall
 
 ## 5.0.0
 
-`5.0.0` will include support for .net Maui, .net 6, WinUI, and Avalon
+`5.0.0` will include support for .net Maui, .net 6, WinUI, and AvaloniaUI
 
 
 
