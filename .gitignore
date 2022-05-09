@@ -40,3 +40,6 @@ validation-report.json
 # Folders to ignore
 node_modules
 bower_components
+.vs/
+.vs/slnx.sqlite
+.vs/CaliburnMicroDocsFork/v16/.suo
