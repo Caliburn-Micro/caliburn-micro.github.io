@@ -6,7 +6,7 @@ title: Add the About Dialog Form to the ShellViewModel
 
 ## Add the Dialog Form to the ShellViewModel
 
-In a previous part we have seen how to invoke user controls. To use Dialog Forms is slightly more complicated. In this part we wiil hook up the [About dialog](DialogForm) to the [ShellViewModel](ShellViewModel).  To support this an interface with a ``Windowmanager`` is needed in the ``ShellViewModel``
+In a previous part we have seen how to invoke user controls. To use Dialog Forms is slightly more complicated. In this part we wiil hook up the [About dialog](DialogForm) to the [ShellViewModel](ShellViewModel).  To support this an interface with a ``WindowManager`` is needed in the ``ShellViewModel``
 
 First, declare a readonly class variable in ``ShellViewModel.cs``:
 
@@ -14,25 +14,25 @@ First, declare a readonly class variable in ``ShellViewModel.cs``:
 private readonly IWindowManager _windowManager;
 ```
 
-Then adapt the constructor for the ``ShellViewModel`` to import the ``IWindowManager`` interface. The ``container`` we created in the previous section will handle this, while creating the ``ShellViewModel``.
+Then adapt the constructor for the ``ShellViewModel`` to import the ``IWindowManager`` interface. The ``container`` we created in a [previous section](SimpleContainer) will handle this, while creating the ``ShellViewModel``.
 
 ```C#
 public ShellViewModel(IWindowManager windowManager)
     {
-    windowManager= windowManager;
+    _windowManager = windowManager;
     }
 ```
 
-Now, using the Caliburn.Micro naming conventions, a method can be created that is invoked when the menu item "About" is clicked:
+Now, using the Caliburn.Micro naming conventions, a method can be created that is invoked when the menu item named "About" is clicked:
 
 ```C#
 public Task About()
   {
   return _windowManager.ShowDialogAsync(IoC.Get<AboutViewModel>());
   }
-  ```
+```
 
-  ``ShowDialogAsync`` will show a viewmodel as a modal dialog form. The DialogResult will be returned as ``bool?``. You can set the desired value in the ViewModel using:
+``ShowDialogAsync`` will show a viewmodel as a modal dialog form. The DialogResult will be returned as ``bool?``. You can set the desired value in the ViewModel using:
 
 ```C#
 TryClose(true); // for OK
@@ -41,19 +41,19 @@ TryClose(false); // for Cancel
 
   If you need a modeless form, this code can be used:
 
-  ```C#
+```C#
 _windowManager.ShowWindowAsync(IoC.Get<AboutViewModel>());  
-  ```
+```
 
 The third variant is to show a popup form at the current mouse position:
 
- ```C#
+```C#
 _windowManager.ShowPopupAsync(IoC.Get<AboutViewModel>());  
-  ```
+```
 
 ### More about the WindowManager
 
-The WindowManager is specific for the platform your code runs at. It is not very well documentend, but in its full form it hase some addtional parameters:
+The WindowManager is specific for the platform your code runs at. It is not very well documentend, but in its full form it hase some additional parameters:
 
 ```C#
 public virtual async Task<bool?> ShowDialogAsync(object rootModel, object context = null, IDictionary<string, object> settings = null)

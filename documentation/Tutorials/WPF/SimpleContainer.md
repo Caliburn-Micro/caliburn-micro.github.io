@@ -39,26 +39,27 @@ We need to setup the contents of the container by overriding the ``Configure`` m
              viewModelType, viewModelType.ToString(), viewModelType));
        }
      }
-     ```
+```
+
 The first line adds the container itself to the container.
 
 ```C#
 _container.Instance(_container);
 ```
 
-If you need it can do something like this:
+If you need it can do something like this to get access to the container:
 
 ```C#
-var c= IoC.Get<SimpleContainer>();
+var container = IoC.Get<SimpleContainer>();
 ```
 
-Next, two interfaces are added tot the container as ``Singleton`` which means only one instance will be created and it will be used repeatedly.
+Next, two interfaces are added tot the container as ``Singleton`` which means only one instance will be created and the instance will be used repeatedly. You should consider carefully if you really need to use a single instance container.
 
 ```C#
  _container
        .Singleton<IWindowManager, WindowManager>()
        .Singleton<IEventAggregator, EventAggregator>()
- ```
+```
 
 The use for those two classes will be explained later, but it is convenient to add them right now.
 
@@ -93,7 +94,7 @@ protected override IEnumerable<Assembly> SelectAssemblies()
 
 In this example the ViewModels from a Logging library are added. It looks a bit strange, but you need one class in the assemby as an example to locate the assembly.
 
-Finally some additional code must be created to setup all stuff. You create variants to do more fancy things, but this is outside the scope of this tutorial.
+Finally three additional methods must be created to setup all stuff. You can create variants to do more fancy things, but this is outside the scope of this tutorial.
 
 ```C#
     protected override object GetInstance(Type service, string key)

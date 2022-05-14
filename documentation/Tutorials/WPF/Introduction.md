@@ -15,6 +15,10 @@ You will learn to build a new WPF real world application using Caliburn.Micro fr
 
 Caliburn.Micro supports a number of other platforms, next to WPF desktop applications. These platforms is not covered in this tutorial. Later other tutorials may be added to discuss that topic.
 
+The code for the finished tutoral project can be found here:
+
+[Tutorial code](https://github.com/Caliburn-Micro/Caliburn.Micro/tree/master/samples/tutorials/wpf/wpf.tutorial)
+
 ### Feedback is welcome
 
 Please enter your feedback in an issue I created in the Caliburn.Micro documentation project:  

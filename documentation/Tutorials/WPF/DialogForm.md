@@ -1,3 +1,5 @@
+
+
 ---
 layout: page
 title: Create a Dialog Form
@@ -50,6 +52,10 @@ Window x:Class="Caliburn.Micro.Tutorial.Wpf.Views.AboutView"
 </Window>
 ```
 
+The form looks like this:
+
+![About dialog form](/public/images/documentation/Tutorials/WPF/Aboutform.jpg)
+
 The code behind in ``AboutView.cs`` looks like this:
 
 ```C#
@@ -78,7 +84,7 @@ namespace Caliburn.Micro.Tutorial.Wpf.Views
       }
     }
   }
-  ```
+```
 
   Because a hyperlink is used, a workaround is needed to make it work properly. It is not related to Caliburn.Micro and one of the few exceptions where you may want to use some code in the code behind.
 
@@ -103,6 +109,8 @@ namespace Caliburn.Micro.Tutorial.Wpf.ViewModels
       {
       return TryCloseAsync();
       }
+    }
+  }
 ```
 
 The use of ``CloseForm`` may look a bit strange. You can use ``Close`` but that solution requires the new qaulifier because it hides a Windows method.
