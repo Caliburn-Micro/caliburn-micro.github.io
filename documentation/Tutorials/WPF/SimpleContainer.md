@@ -2,9 +2,12 @@
 layout: page
 title: Add a simple container
 ---
+
+[Contents](Contents) [Previous](Menu) [Next](DialogForm)
+
 ## Dependency control container
 
-In this part of the WPF Tutorial an Inversion of Control Container will be added. This container is a kind of dispenser for class objects. You also will find the term Dependency Injection used often. You can do without and use new statements to instantiate class objects, but for complex applicationt using a container is considered best practice for good reasons. For more backgroud, one of your options is to watch this video: [Tim Corey Dependency Inversion tutorial](https://www.youtube.com/watch?v=NnZZMkwI6KI)
+In this part of the WPF Tutorial an Inversion of Control Container will be added. This container is a kind of dispenser for class objects. You also will find the term Dependency Injection used often. You can do without and use new statements to instantiate class objects, but for complex applicationt using a container is considered best practice for good reasons. For more background, one of your options is to watch this video: [Tim Corey Dependency Inversion tutorial](https://www.youtube.com/watch?v=NnZZMkwI6KI)
 
 For this tutorial a Caliburn.Micro ``SimpleContainer`` will be used. Make following changes t ``Bootstrapper.cs``:
 
@@ -49,7 +52,7 @@ If you need it can do something like this:
 var c= IoC.Get<SimpleContainer>();
 ```
 
-Next, two interfaces are added tot the container as ``SingleTon`` which means on lon one instance will be created and it will be used repeatedly.
+Next, two interfaces are added tot the container as ``Singleton`` which means only one instance will be created and it will be used repeatedly.
 
 ```C#
  _container
@@ -57,7 +60,7 @@ Next, two interfaces are added tot the container as ``SingleTon`` which means on
        .Singleton<IEventAggregator, EventAggregator>()
  ```
 
-The use for those two class will be explained later, but it is convenient to add them right now.
+The use for those two classes will be explained later, but it is convenient to add them right now.
 
 Finally a longer chunk of code is needed. It is a bit more complicated but this code will retrieve all ViewModels in the executing asembly:
 
@@ -73,9 +76,9 @@ foreach(var assembly in SelectAssemblies())
        }
 ```
 
-For these ViewModels each time you get a reference a new instance is created. The code relies heavily on Reflexction and Linq. If you are not familiar with these aspects of .Net it is recommende to study them at some point.
+For these ViewModels each time you get a reference a new instance is created. The code relies heavily on Reflection and Linq. If you are not familiar with these aspects of .Net it is recommended to study them at some point.
 
-``SelectAssemblies`` is defined in Caliburn.Micro. If wnat to add ViewModels that are created in library projects, you need to override this method. Here follows an example
+``SelectAssemblies`` is defined in Caliburn.Micro. If you want to add ViewModels that are created in library projects, you need to override this method. Here follows an example
 
 ```C#
 protected override IEnumerable<Assembly> SelectAssemblies()
@@ -88,9 +91,9 @@ protected override IEnumerable<Assembly> SelectAssemblies()
       }
 ```
 
-In this example the ViewModels from a Logging library are added. It looks a bit curious, but you need one class in the assemby as an example to locate the assembly.
+In this example the ViewModels from a Logging library are added. It looks a bit strange, but you need one class in the assemby as an example to locate the assembly.
 
-Finally some additional code must be created. It allows you to do fancy things, but it is outside the scope of this tutorial.
+Finally some additional code must be created to setup all stuff. You create variants to do more fancy things, but this is outside the scope of this tutorial.
 
 ```C#
     protected override object GetInstance(Type service, string key)
@@ -107,4 +110,6 @@ Finally some additional code must be created. It allows you to do fancy things, 
       {
       _container.BuildUp(instance);
       }
-      ```
+```
+
+[Contents](Contents) [Previous](Menu) [Next](DialogForm)

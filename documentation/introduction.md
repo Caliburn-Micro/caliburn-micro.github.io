@@ -50,5 +50,4 @@ Just to be clear, this isn’t a toy framework. As I said, I really focused on s
 
 Keeping with the spirit of “Build Your Own…” I want developers to understand how this little framework works, inside and out. I’ve intentionally chosen Git for source control, because I want developers to take ownership. While I’ve done some work to make the most important parts of the framework extensible, I’m hoping to see many Forks, and looking forward to seeing your Pull requests.
 
-[mix]: http://live.visitmix.com/MIX10/Sessions/EX15
-[caliburn]: http://caliburn.codeplex.com/
+[Caliburn.Micro at github](https://github.com/Caliburn-Micro/Caliburn.Micro)

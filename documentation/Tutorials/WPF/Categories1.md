@@ -67,7 +67,7 @@ namespace Caliburn.Micro.Tutorial.Wpf.ViewModels
       set
         {
         _selectedCategoryModel = value;
-        NotifyOfPropertyChange(() => SelectedCategory);
+        NotifyOfPropertyChange(nameof(SelectedCategory));
         }
       }
 
@@ -76,7 +76,7 @@ namespace Caliburn.Micro.Tutorial.Wpf.ViewModels
       get => _categoryName; set
         {
         _categoryName = value;
-        NotifyOfPropertyChange(() => CategoryName);
+        NotifyOfPropertyChange(nameof(CategoryName));
         }
       }
 
@@ -85,7 +85,7 @@ namespace Caliburn.Micro.Tutorial.Wpf.ViewModels
       get => _categoryDescription; set
         {
         _categoryDescription = value;
-        NotifyOfPropertyChange(()=>CategoryDescription);
+        NotifyOfPropertyChange(nameof(CategoryDescription));
         }
       }
 
@@ -169,24 +169,31 @@ public string CategoryName
       get => _categoryName; set
         {
         _categoryName = value;
-        NotifyOfPropertyChange(() => CategoryName);
+        NotifyOfPropertyChange(nameof(CategoryName));
         }
       }
 ```
 
 The example shows a full property is used. In the setter we use an additional line of code:
 
-``NotifyOfPropertyChange(() => CategoryName);``
+``NotifyOfPropertyChange(nameof(CategoryName));``
+
+In many Caliburn.Micro examples, you may see this
+
+``NotifyOfPropertyChange(nameof(CategoryName));``
+
+Caliburn.Micro has some code that implements this function. 
+These two solutions are equvalent and protect you from typing errors. ``nameof`` is a new C# language feature, introduced in C# 6. It may execute a bit faster and you may prefer this newer way of doing things. 
 
 This is the Caliburn.Micro way of implementing change notifications. Its use is not restricted to using it in a setter. Any place where you need to tell the UI that a property is changed, just call this method.
 
-Alternatively you can use ``NotifyOfPropertyChange("CategoryName");`` which may look more familiar and may be a way to help migrating an existing project to Caliburn.Micro. The advantage of the lambda expression is that the compiler will detect typos for you.
+Alternatively you can use ``NotifyOfPropertyChange("CategoryName");`` which may look more familiar and may be a way to help migrating an existing project to Caliburn.Micro. 
 
 ```csharp
 protected override void OnViewLoaded(object view)
       {
       base.OnViewLoaded(view);
-      CategoryList.Add(new CategoryModel {CategoryName="Meals",CategoryDescription="Lunched and diners"});
+      CategoryList.Add(new CategoryModel {CategoryName="Meals",CategoryDescription="Lunches and diners"});
       CategoryList.Add(new CategoryModel { CategoryName = "Representation", CategoryDescription = "Gifts for our customers" });
       }
 ```

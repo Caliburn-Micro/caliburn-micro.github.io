@@ -2,6 +2,9 @@
 layout: page
 title: Add a menu
 ---
+
+[Contents](Contents) [Previous](ConditionalExecution) [Next](SimpleContainer)
+
 ## Create a menu
 
 The previous parts did provide the techniques to create a simple MVVM application. In the next parts more functions will be added. Before we do so, a menu will be added to allow access to these new functions and to demonstrate ways to interact between these functions.
@@ -39,3 +42,6 @@ Of course you need to add propertychanged notifications where you change the ena
 * Add a WindowManager interface.
 * Create the dialog form and its ViewManager
 * Hook it all up into the ShellViewModel
+
+
+[Contents](Contents) [Previous](ConditionalExecution) [Next](SimpleContainer)

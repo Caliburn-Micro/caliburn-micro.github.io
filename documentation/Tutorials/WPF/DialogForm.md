@@ -2,7 +2,9 @@
 layout: page
 title: Create a Dialog Form
 ---
-## Create a simle dialog form
+[Contents](Contents) [Previous](SimpleContainer) [Next](AddDialogToShellView)
+
+## Create a simple dialog form
 
 As a very simple example of a Dialog Form, an About form is created, name it ``AboutView.xaml``
 
@@ -121,3 +123,5 @@ namespace Caliburn.Micro.Tutorial.Wpf.Models
   ```
   
   In this particular case all data are effectively constants, so no need to implement ``NotifyOfPropertyChange``.
+  
+  [Contents](Contents) [Previous](SimpleContainer) [Next](AddDialogToShellView)

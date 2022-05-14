@@ -2,11 +2,13 @@
 layout: page
 title: Add the About Dialog Form to the ShellViewModel
 ---
-## Add the About Dialog Form to the ShellViewModel
+[Contents](Contents) [Previous](DialogForm)
 
-In a previous part we have seen how to invoke user controls. To use Dialog Forms is slightly more complicated. To support this an interface with a ``Windowmanager`` is needed in the ``ShellViewModel``
+## Add the Dialog Form to the ShellViewModel
 
-First, declare a readnoly class variable in ``ShellViewModel.cs``:
+In a previous part we have seen how to invoke user controls. To use Dialog Forms is slightly more complicated. In this part we wiil hook up the [About dialog](DialogForm) to the [ShellViewModel](ShellViewModel).  To support this an interface with a ``Windowmanager`` is needed in the ``ShellViewModel``
+
+First, declare a readonly class variable in ``ShellViewModel.cs``:
 
 ```C#
 private readonly IWindowManager _windowManager;
@@ -49,7 +51,7 @@ The third variant is to show a popup form at the current mouse position:
 _windowManager.ShowPopupAsync(IoC.Get<AboutViewModel>());  
   ```
 
-## More about the WindowManager
+### More about the WindowManager
 
 The WindowManager is specific for the platform your code runs at. It is not very well documentend, but in its full form it hase some addtional parameters:
 
@@ -57,10 +59,9 @@ The WindowManager is specific for the platform your code runs at. It is not very
 public virtual async Task<bool?> ShowDialogAsync(object rootModel, object context = null, IDictionary<string, object> settings = null)
 ```
 
-``rootModel`` refers to your ``ViewModel``.
-``context`` appears to refer to the ``View`` you want to associate with the ViewModel. In most case ``null`` is a good value. Caliburn.Micro will do the magic for you.
-
-``settings`` allows to insert settings for the window. In case you want to experiment, have a look at this blog:
+* ``rootModel`` refers to your ``ViewModel``.
+* ``context`` appears to refer to the ``View`` you want to associate with the ViewModel. In most case ``null`` is a good value. Caliburn.Micro will do the magic for you.
+* ``settings`` allows to insert settings for the window. In case you want to experiment, have a look at this blog:
 [System.Mike!](https://claytonone.wordpress.com/2015/01/16/caliburn-micro-part-6-the-window-manager/)
 
 ```C#
@@ -75,4 +76,6 @@ IWindowManager manager = new WindowManager();
 manager.ShowDialog( myViewModel, null, settings );
 ```
 
-Especially for library functions this may be interesting. In the tutorial example it is not used further.
+Especially for library functions this may be interesting. In the tutorial example it is not used.
+
+[Contents](Contents) [Previous](DialogForm)
