@@ -41,7 +41,7 @@ The last step to prepare the project is to create three folders in the ``Calibur
 2. Views
 3. ViewModels
 
-The solution explorer tab should loook like shown below:
+The solution explorer tab should look like shown below:
 
 ![Adding folders](/public/images/documentation/Tutorials/WPF/AddingFolders.jpg)
 

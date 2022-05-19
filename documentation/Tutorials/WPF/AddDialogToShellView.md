@@ -6,7 +6,7 @@ title: Add the About Dialog Form to the ShellViewModel
 
 ## Add the Dialog Form to the ShellViewModel
 
-In a previous part we have seen how to invoke user controls. To use Dialog Forms is slightly more complicated. In this part we wiil hook up the [About dialog](DialogForm) to the [ShellViewModel](ShellViewModel).  To support this an interface with a ``WindowManager`` is needed in the ``ShellViewModel``
+In a previous part we have seen how to invoke user controls. To use Dialog Forms is slightly more complicated. In this part we will hook up the [About dialog](DialogForm) to the [ShellViewModel](ShellViewModel).  To support this an interface with a ``WindowManager`` is needed in the ``ShellViewModel``
 
 First, declare a readonly class variable in ``ShellViewModel.cs``:
 
@@ -53,7 +53,7 @@ _windowManager.ShowPopupAsync(IoC.Get<AboutViewModel>());
 
 ### More about the WindowManager
 
-The WindowManager is specific for the platform your code runs at. It is not very well documentend, but in its full form it hase some additional parameters:
+The WindowManager is specific for the platform your code runs at. It is not very well documented, but in its full form it has some additional parameters:
 
 ```C#
 public virtual async Task<bool?> ShowDialogAsync(object rootModel, object context = null, IDictionary<string, object> settings = null)

@@ -15,7 +15,7 @@ You will learn to build a new WPF real world application using Caliburn.Micro fr
 
 Caliburn.Micro supports a number of other platforms, next to WPF desktop applications. These platforms is not covered in this tutorial. Later other tutorials may be added to discuss that topic.
 
-The code for the finished tutoral project can be found here:
+The code for the finished tutorial project can be found here:
 
 [Tutorial code](https://github.com/Caliburn-Micro/Caliburn.Micro/tree/master/samples/tutorials/wpf/wpf.tutorial)
 
@@ -35,7 +35,7 @@ For this tutorial, we assume you already have the following basic knowledge:
 + You know about dependency inversion and interfaces
 + You know how events are created and used
 
-If you miss some knowledge, the [YouTube channel of Tim Corey](https://www.youtube.com/user/IAmTimCorey/videos) is a good soource for information. His videos are free, but he also offers paid courses of excellent quality.
+If you miss some knowledge, the [YouTube channel of Tim Corey](https://www.youtube.com/user/IAmTimCorey/videos) is a good source for information. His videos are free, but he also offers paid courses of excellent quality.
 
 ### Environment
 

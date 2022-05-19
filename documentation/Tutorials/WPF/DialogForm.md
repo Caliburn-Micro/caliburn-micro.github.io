@@ -113,7 +113,7 @@ namespace Caliburn.Micro.Tutorial.Wpf.ViewModels
   }
 ```
 
-The use of ``CloseForm`` may look a bit strange. You can use ``Close`` but that solution requires the new qaulifier because it hides a Windows method.
+The use of ``CloseForm`` may look a bit strange. You can use ``Close`` but that solution requires the new qualifier because it hides a Windows method.
 
 Finally a Model is used to represent the data in the form. The filename is ``AboutModel.cs``
 

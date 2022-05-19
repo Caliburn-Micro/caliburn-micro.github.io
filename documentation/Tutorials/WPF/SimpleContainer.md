@@ -7,7 +7,7 @@ title: Add a simple container
 
 ## Dependency control container
 
-In this part of the WPF Tutorial an Inversion of Control Container will be added. This container is a kind of dispenser for class objects. You also will find the term Dependency Injection used often. You can do without and use new statements to instantiate class objects, but for complex applicationt using a container is considered best practice for good reasons. For more background, one of your options is to watch this video: [Tim Corey Dependency Inversion tutorial](https://www.youtube.com/watch?v=NnZZMkwI6KI)
+In this part of the WPF Tutorial an Inversion of Control Container will be added. This container is a kind of dispenser for class objects. You also will find the term Dependency Injection used often. You can do without and use new statements to instantiate class objects, but for complex applications using a container is considered best practice for good reasons. For more background, one of your options is to watch this video: [Tim Corey Dependency Inversion tutorial](https://www.youtube.com/watch?v=NnZZMkwI6KI)
 
 For this tutorial a Caliburn.Micro ``SimpleContainer`` will be used. Make following changes t ``Bootstrapper.cs``:
 
@@ -40,6 +40,7 @@ We need to setup the contents of the container by overriding the ``Configure`` m
        }
      }
 ```
+### Setup of the container
 
 The first line adds the container itself to the container.
 
@@ -63,7 +64,21 @@ Next, two interfaces are added tot the container as ``Singleton`` which means on
 
 The use for those two classes will be explained later, but it is convenient to add them right now.
 
-Finally a longer chunk of code is needed. It is a bit more complicated but this code will retrieve all ViewModels in the executing asembly:
+
+### Add the viewmodels to the container
+
+Now you need to add all viewmodels to the container. For each one, you can add a line of code that looks like this:
+
+```c#
+ __container
+           .PerRequest<ShellViewModel>()
+           .PerRequest<CategoryViewModel>()
+           ...
+
+```
+This works fine and gives you detailed control on the process. You also can chose other ways to add viewmodels to the container, like the Singleton method discussed before. The disadvantage is that if you forget to do this step, you will get error messages because the application cannot find the viewmodel. 
+
+Another way of working is to automate this, using reflection. The code below will d the job and will retrieve all ViewModels in the executing assembly:
 
 ```C#
 foreach(var assembly in SelectAssemblies())

@@ -36,9 +36,9 @@ MenuItems seem not to support naming conventions like ``CanFileMenu`` directly. 
       }
     }
 ```
-Of course you need to add propertychanged notifications where you change the enabled status of this MenuItem. In the next parts an About Dialog Form will be added. In order to do so an few steps are needed to enable the appication to show Dialog Forms:
+Of course you need to add [propertychanged](Categories1.md) notifications where you change the enabled status of this MenuItem. In the next parts an About Dialog Form will be added. In order to do so an few steps are needed to enable the application to show Dialog Forms:
 
-* Add an Inverion of control container
+* Add an Inversion of control container
 * Add a WindowManager interface.
 * Create the dialog form and its ViewManager
 * Hook it all up into the ShellViewModel

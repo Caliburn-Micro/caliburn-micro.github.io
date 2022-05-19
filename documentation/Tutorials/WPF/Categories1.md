@@ -151,7 +151,7 @@ CategoryList is a List containing all categories. It is used in the ``DataGrid``
 ...
 ```
 
-This code fragment requires some clarification. ``CategoryList`` represents a refeence variable. The ``NotifyOfPropertyChange`` method cannot look inside it to see if the contents has changed. To solve this, the contents is removed and completely replaced. There is another way to solve this. In this tutorial  another user control using lists will be added. There it will be explained how this issue can be solved. It has some drawbacks, so it is good you can choose which solution to prefer.
+This code fragment requires some clarification. ``CategoryList`` represents a reference variable. The ``NotifyOfPropertyChange`` method cannot look inside it to see if the contents has changed. To solve this, the contents is removed and completely replaced. There is another way to solve this. In this tutorial  another user control using lists will be added. There it will be explained how this issue can be solved. It has some drawbacks, so it is good you can choose which solution to prefer.
 
 There is one more thing to discuss here:
 
@@ -173,6 +173,7 @@ public string CategoryName
         }
       }
 ```
+### Notifications
 
 The example shows a full property is used. In the setter we use an additional line of code:
 
@@ -180,14 +181,28 @@ The example shows a full property is used. In the setter we use an additional li
 
 In many Caliburn.Micro examples, you may see this
 
-``NotifyOfPropertyChange(nameof(CategoryName));``
+``NotifyOfPropertyChange(()=>CategoryName);``
 
 Caliburn.Micro has some code that implements this function. 
-These two solutions are equvalent and protect you from typing errors. ``nameof`` is a new C# language feature, introduced in C# 6. It may execute a bit faster and you may prefer this newer way of doing things. 
+These two solutions are equivalent and protect you from typing errors. ``nameof`` is a new C# language feature, introduced in C# 6. It may execute a bit faster and you may prefer this newer way of doing things. 
 
 This is the Caliburn.Micro way of implementing change notifications. Its use is not restricted to using it in a setter. Any place where you need to tell the UI that a property is changed, just call this method.
 
-Alternatively you can use ``NotifyOfPropertyChange("CategoryName");`` which may look more familiar and may be a way to help migrating an existing project to Caliburn.Micro. 
+If you use it in a setter, you can omit the name of the property. It will automatically be retrieved from the calling object. So you may do this as well:
+
+```csharp
+public string CategoryName
+      {
+      get => _categoryName; set
+        {
+        _categoryName = value;
+        NotifyOfPropertyChange(); // this uses CategoryName as the name of the property
+        }
+      }
+```
+This will not work if you want to create the notification from other places in your code.
+
+Finally, you can use ``NotifyOfPropertyChange("CategoryName");`` which may look more familiar and may be a way to help migrating an existing project to Caliburn.Micro. 
 
 ```csharp
 protected override void OnViewLoaded(object view)
