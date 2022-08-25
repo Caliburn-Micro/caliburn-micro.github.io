@@ -4,6 +4,12 @@ title: Contents
 ---
 ## Contents
 
+[Documentation index](../../Index)
+
+You can find the tutorial code here:
+
+[Tutorial code](https://github.com/Caliburn-Micro/Caliburn.Micro/tree/master/samples/tutorials/wpf/wpf.tutorial)
+
 1. [Introduction](Introduction)
 2. [Introduction MVVM](Introduction_MVVM)
 3. [Solution setup](SolutionSetup)
@@ -14,9 +20,14 @@ title: Contents
     4. [Update app.xaml](App_Xaml)
     5. [Add simple logging](SimpleLogging)
 5. [Create an expenses logbook](ExpensesLogbook)
-    1. [Create a categories user control, part 1](Categories)
-    2. [Hook up the ViewModel in the Shell](CategoryEditorHookedUp)
-    3. [Create the CategoryView](CreateCategoryView)
-    4. [Conditions for execution of buttons](ConditionsExecution)
+    1. [Create a categories user control, part 1](Categories1)
+    2. [Hook up the ViewModel in the Shell](CategoryEditorHookup)
+    3. [Create the CategoryView](CategoryView)
+    4. [Conditions for execution of buttons](ConditionalExecution)
+6. [Add a dialog form](Menu)
+    1. [Add a menu to the ShellView](Menu)
+    2. [Add a simple container](SimpleContainer)
+    3. [Create a Dialog](DialogForm)
+    2. [Add the Dialog to ShellView](AddDialogToShellView)
 
 [Resources for further study](ForFurtherStudy)

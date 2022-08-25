@@ -3,7 +3,7 @@ layout: page
 title: Expenses Logbook introduction
 ---
 
-[Contents](Contents) [Previous](CategoryView) [Next](ConditionalExecution)
+[Contents](Contents) [Previous](CategoryView) [Next](Menu)
 
 ## Conditional Execution
 
@@ -183,4 +183,4 @@ namespace Caliburn.Micro.Tutorial.Wpf.ViewModels
 
 This concludes the functions to setup Categories. You should be able to compile and run the app now.
 
-[Contents](Contents) [Previous](CategoryView) [Next](ConditionalExecution)
+[Contents](Contents) [Previous](CategoryView) [Next](Menu)

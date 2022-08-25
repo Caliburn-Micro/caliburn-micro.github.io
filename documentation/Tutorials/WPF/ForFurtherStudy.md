@@ -15,6 +15,6 @@ This tutorial may get you started, but there are other resources you can use to 
 
 + [Picking a new MVVM Framework](https://www.youtube.com/watch?v=8E000zu8UhQ)
 
-+ [A written tutorial for MVVM]{https://www.tutorialspoint.com/mvvm/index.htm)
++ [A written tutorial for MVVM](https://www.tutorialspoint.com/mvvm/index.htm)
 
 [Back to Contents](Contents)

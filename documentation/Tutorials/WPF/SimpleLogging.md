@@ -20,6 +20,6 @@ LogManager.GetLog = type => new DebugLog(type);
 
 The location where it is activated is not very critical. You can include it in the constructor.
 
-The logger will use the Output window in Visual Studio to display logging information it collects from Caliburn.Micro.  By default it uses the implementation DebugLog.cs in the Caliburn.Micro library. Alternativeliy, you can creatte your own version.
+The logger will use the Output window in Visual Studio to display logging information it collects from Caliburn.Micro.  By default it uses the implementation DebugLog.cs in the Caliburn.Micro library. Alternatively, you can create your own version.
 
 [Contents](Contents) [Previous](App_Xaml) [Next](ExpensesLogbook)

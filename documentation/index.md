@@ -8,6 +8,7 @@ title: Documentation
     - [Obtain and Build the Code](./build)
     - [Nuget](./nuget)
     - [Cheat Sheet](./cheat-sheet)
+    - [WPF Tutorial](./Tutorials/wpf/Contents)
  - Soup to Nuts
     - [Basic Configuration](./configuration)
     - [Customizing the Bootstrapper](./bootstrapper)
