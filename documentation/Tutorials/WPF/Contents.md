@@ -8,7 +8,7 @@ title: Contents
 
 You can find the tutorial code here:
 
-[Tutorial code](https://github.com/Caliburn-Micro/Caliburn.Micro/tree/master/samples/tutorials/wpf/wpf.tutorial)
+[Tutorial code](https://github.com/Caliburn-Micro/Caliburn.Micro/tree/master/samples/tutorals/WPF/Wpf.Tutorial)
 
 1. [Introduction](Introduction)
 2. [Introduction MVVM](Introduction_MVVM)
