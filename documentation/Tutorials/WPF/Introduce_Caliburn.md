@@ -13,8 +13,8 @@ In this step, the standard WPF project will be transformed to support the Calibu
 
 So, in this chapter we do a few things:
 
-1. Adapt the **app.xaml** class so it uses **Bootstrapper.cs** instead of **MainWindow.xaml** as string point for your code.
-2. Create your first ViewModel, named **ShellView.cs** as the startup ViwModel for your application.
+1. Adapt the **App.xaml** class so it uses **Bootstrapper.cs** instead of **MainWindow.xaml** as string point for your code.
+2. Create your first ViewModel, named **ShellViewModel.cs** as the startup ViewModel for your application.
 3. Create the first View, named **ShellView.xaml**.
 4. Create a class called **Bootstrapper.cs** which contains all startup logic.
 5. Delete **MainWindow.xaml**, you no longer need this.
