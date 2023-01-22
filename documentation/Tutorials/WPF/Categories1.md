@@ -134,7 +134,7 @@ namespace Caliburn.Micro.Tutorial.Wpf.ViewModels
 
 This is a fairly long code fragment. Now each part of it will be discussed separately. A large part of the ViewModel is devoted to represent the data you need in the View.
 
-The first thing you can see is that the ViewModel inherits from ``Screen``. As the name says, it will allow the use of a single user control or window. In a later chapter of this tutorial, this will be explained in more detail. You also can read [this article](/documentation/Composition.md) in the documentation.
+The first thing you can see is that the ViewModel inherits from ``Screen``. As the name says, it will allow the use of a single user control or window. In a later chapter of this tutorial, this will be explained in more detail. You also can read [this article](/documentation/composition.md) in the documentation.
 
 ``BindableCollection<CategoryModel> CategoryList``
 CategoryList is a List containing all categories. It is used in the ``DataGrid`` we will define in the View.

@@ -9,7 +9,7 @@ title: Add a simple container
 
 In this part of the WPF Tutorial an Inversion of Control Container will be added. This container is a kind of dispenser for class objects. You also will find the term Dependency Injection used often. You can do without and use new statements to instantiate class objects, but for complex applications using a container is considered best practice for good reasons. For more background, one of your options is to watch this video: [Tim Corey Dependency Inversion tutorial](https://www.youtube.com/watch?v=NnZZMkwI6KI)
 
-For this tutorial a Caliburn.Micro ``SimpleContainer`` will be used. Make following changes t ``Bootstrapper.cs``:
+For this tutorial a Caliburn.Micro ``SimpleContainer`` will be used. Make following changes to ``Bootstrapper.cs``:
 
 Add an interface to the container:
 
@@ -54,7 +54,7 @@ If you need it can do something like this to get access to the container:
 var container = IoC.Get<SimpleContainer>();
 ```
 
-Next, two interfaces are added tot the container as ``Singleton`` which means only one instance will be created and the instance will be used repeatedly. You should consider carefully if you really need to use a single instance container.
+Next, two interfaces are added to the container as ``Singleton`` which means only one instance will be created and the instance will be used repeatedly. You should consider carefully if you really need to use a single instance container.
 
 ```C#
  _container
