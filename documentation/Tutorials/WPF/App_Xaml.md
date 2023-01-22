@@ -2,6 +2,7 @@
 layout: page
 title: Change App.xaml
 ---
+
 [Contents](Contents) [Previous](Bootstrapper) [Next](SimpleLogging)
 
 ## Change App.Xaml

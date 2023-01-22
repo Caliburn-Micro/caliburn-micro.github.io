@@ -2,6 +2,7 @@
 layout: page
 title: Simple logging
 ---
+
 [Contents](Contents) [Previous](App_Xaml) [Next](ExpensesLogbook)
 
 ## Simple logging
