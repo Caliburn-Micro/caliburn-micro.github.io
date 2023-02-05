@@ -2,6 +2,7 @@
 layout: page
 title: Change App.xaml
 ---
+
 [Contents](Contents) [Previous](Bootstrapper) [Next](SimpleLogging)
 
 ## Change App.Xaml
@@ -58,7 +59,7 @@ The resulting code should look like this:
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Caliburn.Micro.Tutorial.Wpf">
-    <Application.Resources
+    <Application.Resources>
       <ResourceDictionary>
            <ResourceDictionary.MergedDictionaries>
                <ResourceDictionary>

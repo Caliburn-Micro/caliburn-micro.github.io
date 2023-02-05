@@ -13,7 +13,7 @@ Caliburn.Micro promotes a programming style where you use one window and then sh
 
 ### Create the ShellView class
 
-Since we already created a class ``ShelViewModel`` we also need a WPF Window named ``ShellView``, so create a new WPF Window class in the View folder. You do not need any specific inheritance here.
+Since we already created a class ``ShellViewModel`` we also need a WPF Window named ``ShellView``, so create a new WPF Window class in the View folder. You do not need any specific inheritance here.
 
 ### Add a content control
 

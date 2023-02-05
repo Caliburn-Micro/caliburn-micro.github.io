@@ -2,6 +2,7 @@
 layout: page
 title: Add the About Dialog Form to the ShellViewModel
 ---
+
 [Contents](Contents) [Previous](DialogForm)
 
 ## Add the Dialog Form to the ShellViewModel

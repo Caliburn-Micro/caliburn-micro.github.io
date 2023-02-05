@@ -3,7 +3,7 @@ layout: page
 title: Introduce Caliburn
 ---
 
-[Contents](Contents) [Previous](SolutionSetup) [Next](Bootstrapper)
+[Contents](Contents) [Previous](SolutionSetup) [Next](ShellViewModel)
 
 ## Introduce Caliburn.Micro
 
@@ -23,4 +23,4 @@ Alternatively, you can rename MainWindow.xaml to ShellView.xaml and move it to t
 
 Essentially, you need to perform the same steps to migrate an existing WPF application to a Caliburn.Micro application. Of course, this does not make the application and MVVM application.
 
-[Contents](Contents) [Previous](SolutionSetup) [Next](Bootstrapper)
+[Contents](Contents) [Previous](SolutionSetup) [Next](ShellViewModel)

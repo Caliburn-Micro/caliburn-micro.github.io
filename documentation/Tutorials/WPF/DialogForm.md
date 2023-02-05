@@ -1,9 +1,8 @@
-
-
 ---
 layout: page
 title: Create a Dialog Form
 ---
+
 [Contents](Contents) [Previous](SimpleContainer) [Next](AddDialogToShellView)
 
 ## Create a simple dialog form

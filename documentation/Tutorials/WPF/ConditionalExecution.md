@@ -9,7 +9,7 @@ title: Expenses Logbook introduction
 
 ### Introduction
 
-In WPF applications you can disable a button using ``IsEnabled="false"`` in the XAML code. You can bind this to a property in the code behind, or define the conditions in the code behind. In Caliburn.Micro the ViewModel can determine conditions that must be met in order to execute a command. For example, The ``Edit()`` command is tied to the Button named ``Edit`` in the view. It would e nice if we can disable it if the ``SelectedCategory`` is ``null``.
+In WPF applications you can disable a button using ``IsEnabled="false"`` in the XAML code. You can bind this to a property in the code behind, or define the conditions in the code behind. In Caliburn.Micro the ViewModel can determine conditions that must be met in order to execute a command. For example, The ``Edit()`` command is tied to the Button named ``Edit`` in the view. It would be nice if we can disable it if the ``SelectedCategory`` is ``null``.
 
 ### The Caliburn.Micro solution
 
