@@ -10,7 +10,30 @@ The list has been broken down into sections, some of which can be done in parall
 
 ## 5.0.0
 
-`5.0.0` will include support for .net Maui, .net 6, WinUI, and AvaloniaUI
+`5.0.0` will include support for .net Maui, .net 8 & 9, WinUI3, and AvaloniaUI
+packages available on github nuget feed.
+
+## 6.0.0
+
+#### Upcoming Features
+- **Support for Uno Platform:** V6 will introduce support for the Uno Platform, enhancing cross-platform development capabilities.
+- **Xamarin Version to be Removed:** Due to Microsoft discontinuing support for Xamarin, V6 will no longer include a Xamarin Forms version.
+
+#### Performance Improvements
+- **Enhanced performance:** performance improvements for Caliburn Micro, optimizing both speed and efficiency.
+
+
+### Caliburn.Micro Extensions Project
+
+- **Project Overview:**
+  - This project will provide templates for Caliburn.Micro.
+  - The release will include a code generator to simplify `INotifyPropertyChanged`.
+
+- **IValue Converters:**
+  - Bool to Visibility converter for all platforms, not just UWP.
+  - URL to Image converter.
+  - Decimal to String converter for custom currency formatting.
+  - DateTime to String converter for custom DateTime formatting.
 
 
 
