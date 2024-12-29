@@ -6,6 +6,7 @@ title: Documentation
  - Getting Started
     - [Introduction](./introduction)
     - [Obtain and Build the Code](./build)
+    - [Visual Studio Setup](./VisualStudioSetup.md)
     - [Nuget](./nuget)
     - [Cheat Sheet](./cheat-sheet)
     - [WPF Tutorial](./Tutorials/WPF/Contents)

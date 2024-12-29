@@ -4,10 +4,10 @@ published: true
 title: Caliburn.Micro &middot; 'Xaml made easy'
 ---
 
-A small, yet powerful framework, designed for building applications across all XAML platforms (.NET 4.5+ and .NET Core 3.0+). Its strong support for MV* patterns will enable you to build your solution quickly, without the need to sacrifice code quality or testability.
+A small, yet powerful framework, designed for building applications across all XAML platforms (.NET 4.6.2+ and .NET (core) 8.0+). Its strong support for MV* patterns will enable you to build your solution quickly, without the need to sacrifice code quality or testability.
 
 ### Works everywhere Xaml does
-Supports WPF, UWP, and Xamarin.Forms apps.
+Supports WPF, UWP, Avalonia UI, WinUI3, .net Maui, and Xamarin.Forms apps.
 
 #### and many more ...
 
@@ -99,6 +99,7 @@ As is with any open source project there are many other contributors, you can se
 We'd like to thank the people at [Jetbrains][jb] for providing licenses for [Resharper][resharper] to the team.
 
 [nuget]: https://www.nuget.org/packages/Caliburn.Micro
+
 [docs]: /documentation
 [support]: /support
 [getting-started]: /documentation/getting-started
