@@ -18,4 +18,4 @@ Visual Studio 2022 community edition V17.12.3
 
 - Avalonia For Visual Studio 2022
 
-![Avalonia Extensions](../public/images/posts/VS2022-Extension.png)
+![Avalonia Extensions](../public/images/posts/VS2022-extension.png)
