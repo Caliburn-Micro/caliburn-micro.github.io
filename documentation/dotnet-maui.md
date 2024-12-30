@@ -14,55 +14,58 @@ or if you have an older version
 
 Add a Caliburn.Micro.Maui nuget package to your solution. From the terminal window you can use this command
 
-dotnet add package Caliburn.Micro.Maui --version 5.0.183-beta --source "https://nuget.pkg.github.com/caliburn-micro/index.json"
+    dotnet add package Caliburn.Micro.Maui --version 5.0.183-beta --source "https://nuget.pkg.github.com/caliburn-micro/index.json"
 
 In the platforms folder android modify the MainApplication class to this
 
-[Application]
-public class MainApplication : Caliburn.Micro.Maui.CaliburnApplication
-{
-   public MainApplication(IntPtr handle, JniHandleOwnership ownership)
-    : base(handle, ownership)
-  {
-      Initialize();
-  }
+    [Application]
+    public class MainApplication : Caliburn.Micro.Maui.CaliburnApplication
+    {
+        public MainApplication(IntPtr handle, JniHandleOwnership ownership)
+        : base(handle, ownership)
+        {
+            Initialize();
+        }
 
-  protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+        protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
 
-  protected override void Configure()
-  {
-      base.Configure();
-  }
+        protected override void Configure()
+        {
+             base.Configure();
+        }
 
-  protected override IEnumerable<Assembly> SelectAssemblies()
-  {
-      return new List<Assembly>() { typeof(App).Assembly };
-  }
-}
+        protected override IEnumerable<Assembly> SelectAssemblies()
+        {
+             return new List<Assembly>() { typeof(App).Assembly };
+        }
+    }
+   
 In the iOS folder modify AppDelgate to this
 
-[Register("AppDelegate")]
- public class AppDelegate : Caliburn.Micro.Maui.CaliburnApplicationDelegate
-{
-    public AppDelegate()
+    [Register("AppDelegate")]
+    public class AppDelegate : Caliburn.Micro.Maui.CaliburnApplicationDelegate
     {
-        Initialize();
-    }
+        public AppDelegate()
+        {
+            Initialize();
+        }
 
-    protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
-}
+        protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+    }
+    
 In the MacCatalyst folder modify AppDelegate to this
 
-[Register("AppDelegate")]
-public class AppDelegate : Caliburn.Micro.Maui.CaliburnApplicationDelegate
- {
-    public AppDelegate()
-   {
-        Initialize();
-   }
+    [Register("AppDelegate")]
+    public class AppDelegate : Caliburn.Micro.Maui.CaliburnApplicationDelegate
+    {
+        public AppDelegate()
+       {
+           Initialize();
+       }   
 
-    protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
-}
+        protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+    }
+    
 In the Windows folder modify the App.Xaml to this
 
 <cal:CaliburnApplication
@@ -78,49 +81,51 @@ Make sure you replace x:Class with your apps name
 
 cs file
 
-public partial class App : Caliburn.Micro.Maui.CaliburnApplication
-{
-    /// <summary>
-    /// Initializes the singleton application object.  This is the first line of authored code
-    /// executed, and as such is the logical equivalent of main() or WinMain().
-    /// </summary>
-    public App()
-    {
-	this.InitializeComponent();
-	Initialize();
-    }
+     public partial class App : Caliburn.Micro.Maui.CaliburnApplication
+     {
+         /// <summary>
+        /// Initializes the singleton application object.  This is the first line of authored code
+        /// executed, and as such is the logical equivalent of main() or WinMain().
+        /// </summary>
+        public App()
+        {
+        	this.InitializeComponent();
+	        Initialize();
+        }
 
-     protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
- }
+        protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+     
+     
 The App.Xaml in project root folder should be modified like this
 
-<?xml version = "1.0" encoding = "UTF-8" ?>
-<cal:MauiApplication xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-         xmlns:local="clr-namespace:MauiApp2"
-         xmlns:cal="using:Caliburn.Micro.Maui"
-         x:Class="MauiApp2.App">
-<Application.Resources>
-    <ResourceDictionary>
-        <ResourceDictionary.MergedDictionaries>
-            <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
-            <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
-        </ResourceDictionary.MergedDictionaries>
-    </ResourceDictionary>
-</Application.Resources>
-</cal:MauiApplication>
+     <?xml version = "1.0" encoding = "UTF-8" ?>
+     <cal:MauiApplication xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp2"
+             xmlns:cal="using:Caliburn.Micro.Maui"
+             x:Class="MauiApp2.App">
+     <Application.Resources>
+         <ResourceDictionary>
+             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+     </Application.Resources>
+    </cal:MauiApplication>
+    
 Replace xmlns:Local with your app name
 
 The App.Xamal.cs file
 
-public partial class App : Caliburn.Micro.Maui.MauiApplication
-{
-    public App()
+    public partial class App : Caliburn.Micro.Maui.MauiApplication
     {
-       InitializeComponent();
+        public App()
+        {
+            InitializeComponent();
 
-       Initialize();
+            Initialize();
 
-      DisplayRootViewForAsync<MainViewModel>();
+            DisplayRootViewForAsync<MainViewModel>();
+       }
     }
- }
