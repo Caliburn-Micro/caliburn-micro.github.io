@@ -78,14 +78,6 @@ Select the **read:packages** permission. Typically, I set the expiration for a y
 
 ![read permissions](../public/images/documentation/github-token-packages.png)
 
-## Adding the NuGet Source
-
-Once you’ve generated the token, use it to add a new NuGet source by running the following command in your terminal:
-
-
-    dotnet nuget add source --username <YourUsername> --password <YourToken> --store-password-in-clear-text --name "Caliburn.Micro GitHub" "https://nuget.pkg.github.com/caliburn.micro/index.json"
-
-
 
 ## Add nuget source
 
