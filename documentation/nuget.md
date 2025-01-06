@@ -91,6 +91,6 @@ Replace `<YourUsername>` with your username and `<Your Token Goes here>` with th
 
 To add a package to your project in the folder with the csproj  run the following command.
 
-     add package Caliburn.Micro.Maui --version 5.0.183-beta --source "https://nuget.pkg.github.com/caliburn-micro/index.json"
+     dotnet add package Caliburn.Micro.Maui --version 5.0.183-beta --source "https://nuget.pkg.github.com/caliburn-micro/index.json"
 
 [nuget]: http://www.nuget.org/
