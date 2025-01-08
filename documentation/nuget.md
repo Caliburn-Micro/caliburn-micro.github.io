@@ -61,8 +61,10 @@ For WinRT, the process of getting started is unfortunately quite different from 
 
 
 ##### .net Maui
-For .net Maui, the process of getting started is unfortunately quite different from the other platforms, due to significant design differences in the Windows Xaml APIs. For detailed instructions please see [Working with WinRT](./dotnet-maui.md).
-[nuget]: http://www.nuget.org/
+For .net Maui, the process of getting started is unfortunately quite different from the other platforms because the app provides output for multiple platforms. For detailed instructions please see [Working with WinRT](./dotnet-maui.md).
+
+##### Avalonia UI
+For detailed instructions on using Caliburn.Micro with Avalonia UI see [Working with AvaloniaUI](/AvaloniaUI.md)
 
 
 # Using Packages from the GitHub NuGet Feed
@@ -93,4 +95,4 @@ To add a package to your project in the folder with the csproj  run the followin
 
      dotnet add package Caliburn.Micro.Maui --version 5.0.183-beta --source "https://nuget.pkg.github.com/caliburn-micro/index.json"
 
-[nuget]: http://www.nuget.org/
+[nuget]:https://www.nuget.org/packages?q=caliburn.micro
