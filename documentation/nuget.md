@@ -61,7 +61,7 @@ For WinRT, the process of getting started is unfortunately quite different from 
 
 
 ##### .net Maui
-For .net Maui, the process of getting started is unfortunately quite different from the other platforms because the app provides output for multiple platforms. For detailed instructions please see [Working with WinRT](./dotnet-maui.md).
+For .net Maui, the process of getting started is unfortunately quite different from the other platforms because the app provides output for multiple platforms. For detailed instructions please see [Working with .net Maui](./dotnet-maui.md).
 
 ##### Avalonia UI
 For detailed instructions on using Caliburn.Micro with Avalonia UI see [Working with AvaloniaUI](/AvaloniaUI.md)
