@@ -116,7 +116,7 @@ The App.Xaml in project root folder should be modified like this
     
 Replace xmlns:Local with your app name
 
-The App.Xamal.cs file
+The App.Xaml.cs file
 
     public partial class App : Caliburn.Micro.Maui.MauiApplication
     {
