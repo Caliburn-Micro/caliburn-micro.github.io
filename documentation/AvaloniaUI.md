@@ -6,7 +6,7 @@ title: Working with Avalonia UI
 To use Caliburn.Micro with Avalonia UI use Visual Studio 2022 version 17.3 and install the Avalonia for Visual Studio 2022 extensions. You should also install the Avalonia UI and the AvaloniaUI templates.
 
 ### Step 1: Install Avalonia Templates
-######
+
     dotnet new install Avalonia.Templates
 
 ### Step 2: Create a New Avalonia UI Project
@@ -16,14 +16,14 @@ To use Caliburn.Micro with Avalonia UI use Visual Studio 2022 version 17.3 and i
 ### Step 3: Add Caliburn.Micro.Avalonia NuGet Package
 
 Add the Caliburn.Micro.Avalonia NuGet package to your solution by running this command in the terminal:
-######
+
     dotnet add package Caliburn.Micro.Avalonia --version 5.0.183-beta --source "https://nuget.pkg.github.com/caliburn-micro/index.json"
 
 
 ### Step 4: Create the Bootstrapper Class
 
 Add a file Bootstrapper.cs class to the root of the project
-######
+
     namespace AvaloniaApplication1
     {
          public class Bootstrapper : BootstrapperBase
@@ -74,7 +74,7 @@ Add a file Bootstrapper.cs class to the root of the project
 #### Step 5: Update the App.axaml.cs file
 
 The App.axaml.cs file needs to be updated to this
-######
+
     public partial class App : Application
     {
         public override void Initialize()
