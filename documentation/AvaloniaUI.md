@@ -89,6 +89,7 @@ The App.axaml.cs file needs to be updated to this
         }
     }
 
+You can delete MainWindow.axaml file because it no longer needed
 
 ### Important Note
 
