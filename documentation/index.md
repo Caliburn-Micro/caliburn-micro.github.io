@@ -15,6 +15,7 @@ title: Documentation
     - [Customizing the Bootstrapper](./bootstrapper)
     - [All about Actions](./actions)
     - [Working with Windows RT (UWP)](./windows-runtime) 
+    - [Working with WinUI3](./WinUI3) 
     - [Working with .net Maui](./dotnet-maui)
     - [Working with Avalonia UI](./AvaloniaUI)
     - [IResult and Coroutines](./coroutines)
