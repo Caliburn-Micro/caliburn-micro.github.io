@@ -93,5 +93,5 @@ You can delete MainWindow.axaml file because it no longer needed
 
 ### Important Note
 
- You need to manually add the folder to the Namespace in both the .axaml and the code-behind file for [.axaml.templates](https://github.com/AvaloniaUI/avalonia-dotnet-templates/issues/235) where the folder is dropped from the Namespace for the axaml files.  Please Manually add the folder to the Namespace in the axaml and the code behind file for axaml.
+ You need to manually add the folder to the Namespace in both the .axaml and the code-behind file for [.axaml.cs](https://github.com/AvaloniaUI/avalonia-dotnet-templates/issues/235) where the folder is dropped from the Namespace for the axaml files.  Please Manually add the folder to the Namespace in the axaml and the code behind file for axaml.
 
