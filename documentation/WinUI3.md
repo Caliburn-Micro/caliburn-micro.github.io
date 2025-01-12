@@ -80,11 +80,12 @@ namespace Setup.WinUI3
         /// <param name="args">Details about the launch request and process.</param>
         protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
-            if (args.PreviousExecutionState == ApplicationExecutionState.Running)
+            if (args.UWPLaunchActivatedEventArgs.PreviousExecutionState == ApplicationExecutionState.Running)
                 return;
 
             DisplayRootView<HomeView>();
         }
+        
         protected override object GetInstance(Type service, string key)
         {
             return container.GetInstance(service, key);
