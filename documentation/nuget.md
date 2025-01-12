@@ -56,8 +56,8 @@ namespace YourNamespace
 **Note**: Make sure to remove the StartupUri value. Caliburn.Micro will be handling the main window creation for you. As a result, you no longer need the MainWindow.xaml either.
 
 
-##### WinRT
-For WinRT, the process of getting started is unfortunately quite different from the other platforms, due to significant design differences in the Windows Xaml APIs. For detailed instructions please see [Working with WinRT](./windows-runtime).
+##### WinRT and WinUI3
+For WinRT and WinUI3, the process of getting started is unfortunately quite different from the other platforms, due to significant design differences in the Windows Xaml APIs. For detailed instructions please see [Working with WinRT](./windows-runtime) and [Working with WinUI3](./WinUI3).
 
 
 ##### .net Maui
