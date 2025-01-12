@@ -85,6 +85,7 @@ namespace Setup.WinUI3
 
             DisplayRootView<HomeView>();
         }
+        
         protected override object GetInstance(Type service, string key)
         {
             return container.GetInstance(service, key);
@@ -104,7 +105,7 @@ namespace Setup.WinUI3
 
 ```
 
-Caliburn Micro on its various platforms has usually supported either a View Model first or a View first approach, but not usually both at the same time. Typically Silverlight and WPF applications follow a View Model first approach, usually with a Shell View Model and using view model composition. Meanwhile Windows Phone applications due to having the navigation concept baked very close to the hardware (with the back button) typically follow a View first approach and expose a navigation service to move between pages.
+Caliburn.Micro on its various platforms has usually supported either a View Model first or a View first approach, but not usually both at the same time. Typically Silverlight and WPF applications follow a View Model first approach, usually with a Shell View Model and using view model composition. Meanwhile Windows Phone applications due to having the navigation concept baked very close to the hardware (with the back button) typically follow a View first approach and expose a navigation service to move between pages.
 
 WinUI3 apps sit somewhere in the middle, since there is no hardware back button we don’t have the same drive towards View first, however most apps follow a design where a root Frame control navigating between pages makes sense. However there is nothing stopping a developer using a View Model first approach and for certain apps and scenarios this makes sense. In fact I feel that fully featured apps will use both approaches.
 
