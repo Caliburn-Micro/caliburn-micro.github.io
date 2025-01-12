@@ -57,7 +57,7 @@ namespace YourNamespace
 
 
 ##### WinRT and WinUI3
-For WinRT and WinUI3, the process of getting started is unfortunately quite different from the other platforms, due to significant design differences in the Windows Xaml APIs. For detailed instructions please see [Working with WinRT](./windows-runtime) and [Working with WinUI3](./WinUI3)
+For WinRT and WinUI3, the process of getting started is unfortunately quite different from the other platforms, due to significant design differences in the Windows Xaml APIs. For detailed instructions please see [Working with WinRT](./windows-runtime) and [Working with WinUI3](./WinUI3).
 
 
 ##### .net Maui
