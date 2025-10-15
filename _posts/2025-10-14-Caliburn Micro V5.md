@@ -1,7 +1,6 @@
 # 🚀 Caliburn.Micro V5 Release Notes
 
 ## 🆕 New Platform Support
-a
 - **Avalonia UI (Beta)**
   - Introduced `Caliburn.Micro.Avalonia` adapters
   - Added extensive Avalonia sample files.
